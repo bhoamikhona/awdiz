@@ -1,0 +1,9 @@
+- Node and NPM Setup
+- HTML tags and attributes
+  - `<!DOCTYPE html>`
+  - Parent Tag
+    - `<html></html>`
+      - `<title></title>`
+  - Sibling Tags
+    - `<head></head>`
+    - `<body></body>`
