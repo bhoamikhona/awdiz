@@ -1,0 +1,15 @@
+- Heading 1 through 6
+  - `<h1></h1>`
+  - `<h2></h2>`
+  - `<h3></h3>`
+  - `<h4></h4>`
+  - `<h5></h5>`
+  - `<h6></h6>`
+- paragraph tag
+  - `<p></p>`
+- span tag
+  - `<span></span>`
+- line break `<br/>`
+  - self-closing tag
+- Assignment
+  - make resume using the tags we learned thus far.
