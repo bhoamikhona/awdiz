@@ -1,0 +1,185 @@
+:root {
+  --serif: "DM Serif Display", serif;
+  --mont: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--mont);
+}
+
+p {
+  font-family: var(--mont);
+}
+
+li {
+  font-family: var(--mont);
+  font-size: 1.5rem;
+}
+
+hr {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.fifteen {
+  font-size: 1.5rem;
+}
+
+.two-margin {
+  margin-bottom: 2rem;
+}
+
+.mont {
+  font-family: var(--mont);
+}
+
+.serif {
+  font-family: var(--serif);
+}
+
+/*********** HEADER **********/
+header {
+  padding: 2rem 10rem;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-name {
+  font-size: 5rem;
+}
+
+.first-name {
+  color: #858585;
+}
+
+.profession {
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 400;
+  font-size: 1.8rem;
+  justify-self: end;
+}
+
+/********** ABOUT ***********/
+
+.about {
+  padding: 2rem 10rem;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Profile */
+
+/* Contact */
+
+.about--contact {
+  justify-self: end;
+  text-align: right;
+}
+
+.about--contact ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about--contact ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact--link:link,
+.contact--link:visited {
+  color: #364fc7;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.contact--link:hover,
+.contact--link:active {
+  color: #748ffc;
+}
+
+/********** Professional **********/
+
+.professional {
+  padding: 2rem 10rem;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5fr;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.professional--education {
+  margin-bottom: 2rem;
+}
+
+.professional--hr {
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* education */
+
+.skills--list {
+  padding-left: 2rem;
+  /* font-size: 1.5rem; */
+}
+
+/* work-experience */
+
+.outer-list {
+  padding-left: 4rem;
+}
+
+.inner-list {
+  padding-left: 4rem;
+}
+
+@media (max-width: 106em) {
+  .professional {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@media (max-width: 87.5em) {
+  .professional {
+    grid-template-columns: 1fr 2fr;
+  }
+}
