@@ -1,0 +1,23 @@
+- uses of headings, paragraphs, and span tags
+- style attribute and its syntax
+  - `style="property: value;"` - can use multiple `property: value` in one style attribute
+    - `color`
+    - `background-color`
+    - `font-family`
+    - `font-size`
+    - `text-align`
+- `<title>` displays the name on the tab
+- Prettier extension to format code
+  - shift + alt + f
+- Google Fonts
+- Comments
+  - `<!-- this is a comment -->`
+  - ctrl + /
+- html attributes
+  - `src`
+  - `width` and `height`
+  - `alt`
+- `<img src='' alt=''>`
+
+- Assignment
+  - repeat what we did today twice
