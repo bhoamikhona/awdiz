@@ -1,0 +1,50 @@
+- Lists
+  - un-ordered list `<ul>`
+  - ordered list `<ol>`
+  - `<li>`
+  - Description List `<dl>`
+    - Description Term `<dt>`
+    - Description Data `<dd>`
+- HTML Block & Inline Element
+  - block elements take the entire width available
+  - span elements only take the width as necessary, not more
+- HTML `class` attribute
+  - Syntax - `.className`
+- HTML `id` attribute
+  - Syntax - `#idName`
+- Difference between classes and ids
+- Input Field `<input>`
+  - number
+  - password
+  - email
+  - text
+  - button
+  - checkbox
+  - radio
+  - color
+  - date
+  - datetime
+  - datetime-local
+  - file
+  - hidden
+  - image
+  - month
+  - range
+  - reset
+  - tel
+  - time
+  - url
+  - week
+- HTML Frame Tag
+  - Inline frame is used to embed another html document within the current HTML document.
+  ```html
+  <iframe src="www.google.com" height="300" width="400"></iframe>
+  ```
+- HTML Responsive
+- HTML Forms
+  - `<form>`
+  - `<input>` & `<label>`
+    - `type` attribute
+    - `for` attribute
+    - `id` attribute
+    - `value` attribute
