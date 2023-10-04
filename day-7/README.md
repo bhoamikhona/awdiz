@@ -1,0 +1,23 @@
+- radio buttons
+- checkbox
+- for and id attributes
+- submit form
+- name attribute
+- HTML form elements
+  - input
+    - size attribute
+  - label
+  - select (dropdown menu)
+    - option
+  - textarea
+    - rows and cols attributes
+  - button
+    - onclick
+    - `alert()`
+  - fieldset
+    - this element is used to group related data in a form
+  - legend
+    - defines a caption for the fieldset element
+  - datalist
+  - option
+  - optgroup
