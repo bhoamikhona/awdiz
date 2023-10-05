@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <body>
+    <label for="value">Value:</label>
+    <input type="text" id="value" value="Value Attribute" />
+    <br />
+    <br />
+    <label for="submit-value">Input Type Submit Value:</label>
+    <input type="submit" id="submit-value" value="Submit Value" />
+    <br />
+    <br />
+    <label for="readonly">Readonly:</label>
+    <input type="text" id="readonly" value="Readonly Attribute" />
+    <br />
+    <br />
+    <label for="disabled">Disabled:</label>
+    <input type="text" id="disabled" value="Disabled Attribute" disabled />
+    <br />
+    <br />
+    <label for="size">Size:</label>
+    <input type="text" size="35" value="Size Attribute: 35" />
+    <br />
+    <br />
+    <form>
+      <label for="char-length">Maxlength - 10 and Minlength - 2:</label>
+      <input type="text" id="char-length" maxlength="10" minlength="2" />
+      <input type="submit" />
+    </form>
+    <br />
+    <form>
+      <label for="min-max">Min - 60 and Max - 150:</label>
+      <input id="min-max" type="number" min="60" max="150" />
+      <input type="submit" />
+    </form>
+    <br />
+    <label for="placeholder">Placeholder:</label>
+    <input type="text" placeholder="Placeholder Attribute" id="placeholder" />
+    <br />
+    <br />
+    <form>
+      <label for="required">Required:</label>
+      <input
+        type="text"
+        required
+        placeholder="Required Attribute"
+        itemref="required"
+      />
+      <input type="submit" />
+    </form>
+    <br />
+    <label for="autofocus">Autofocus:</label>
+    <input
+      type="text"
+      placeholder="Autofocus Attribute"
+      id="autofocus"
+      autofocus
+    />
+  </body>
+</html>

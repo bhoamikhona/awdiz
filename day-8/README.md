@@ -1,0 +1,22 @@
+- input tag
+  - `value` attribute
+  - `readonly` attribute
+  - `disabled` attribute
+  - `size` attribute
+  - `maxlength` attribute - type `text` only
+  - `minlength` attribute - type `text` only
+  - `min` attribute - works for types: `number`, `range`, `date`, `datetime-local`, `month`, `time`, and `week`
+  - `max` attribute - works for types: `number`, `range`, `date`, `datetime-local`, `month`, `time`, and `week`
+  - `pattern` attribute - works for `text`, `date`, `search`, `url`, `tel`, `email`, `password` - this requires a regular expression which we will learn later.
+  - `placeholder` attribute
+  - `required` attribute
+  - `autofocus` attribute
+- form tag
+  - `action` attribute
+  - `target` attribute
+    - `_self`
+    - `_blank`
+  - `method` attribute
+    - `post`
+    - `get`
+  - `novalidate` attribute
