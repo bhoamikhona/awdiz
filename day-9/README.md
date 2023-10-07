@@ -1,0 +1,44 @@
+- form tag
+  - `action` attribute
+  - `target` attribute
+    - `_self`
+    - `_target`
+  - `method` attribute
+    - `post`
+    - `get`
+  - `novalidate` attribute
+- HTML Canvas Graphics
+  - `<canvas>`
+- HTML SVG Graphics
+- Font Awesome Icons
+- HTML Media
+  - HTML Video
+    - `<video>`
+      - `controls` attribute
+      - `<source>`
+        - `src` and `type` attributes
+      - `autoplay` attribute
+      - `muted` attribute
+  - HTML Image
+    - `<img>`
+      - `src` and `alt` attributes
+      - `height` and `width` attributes
+  - HTML Audio
+    - `<audio>`
+      - `controls` attribute
+      - `<source>`
+        - `src` and `type` attribute
+  - HTML YouTube
+    - `<iframe>`
+      - `width`, `height`, and `src` attributes
+- Assignment Resume
+  - HTML + CSS
+  - your image
+  - intro and contact
+  - projects
+  - education
+  - certification
+  - achievements
+  - technical skills
+  - use all the tags we learned so far
+  - connect with me form - get the email and message from the user
