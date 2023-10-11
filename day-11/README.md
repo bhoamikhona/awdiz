@@ -18,6 +18,9 @@
   - `outline-width`
   - `outline-offset`
   - `outline`
+  - NOTE to self: Difference between border and outline
+    - Outline differs from borders. Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+    - There are more differences between outline and border, you can read them here: [Stackoverflow: What is the difference between outline and border CSS properties?](https://stackoverflow.com/questions/1158515/what-is-the-difference-between-outline-and-border-css-properties)
 - CSS Text Color
   - `color`
     - RGB
