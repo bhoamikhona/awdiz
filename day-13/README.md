@@ -1,0 +1,46 @@
+- Font Weight
+  - 100 - 1000
+  - bold
+  - bolder
+  - light
+  - normal
+- font-variant
+  - small-caps
+- font-size
+  - px
+  - em: 1em = 16px
+  - %
+- Google fonts
+- Fontawesome icons
+- Bootstap icons
+- CSS Links
+  - color
+  - font-family
+  - backgorund
+  - `a:visited`
+  - `a:active`
+  - `a:hover`
+- display
+  - block
+  - inline
+  - none
+  - hidden
+- Block Level Elements
+  - div
+  - h1 to h6
+  - p
+  - form
+  - header
+  - footer
+  - section
+- Inline Elements
+  - span
+  - a
+  - img
+- width and max-width
+- position
+  - static
+  - relative
+  - fixed
+  - sticky
+  - absolute

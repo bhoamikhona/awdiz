@@ -4,7 +4,7 @@
     - `center`
     - `right`
     - `justify` - to perfectly center all the text with left and right margins/edges.
-  - `text-align-right` - this property specifies how to align the last line of a text/paragraph.
+  - `text-align-last` - this property specifies how to align the last line of a text/paragraph.
     - `left`
     - `center`
     - `right`
@@ -42,3 +42,17 @@
 - Safe fonts for the Web
 - Backup Fonts/Fallback Fonts
 - Google Fonts
+
+- text-align: left, center, right, justify
+- text-align-last: left, center, right
+- text-decoration-line: overline, line-through, underline, overline underline
+- text-decoration-color
+- text-decoration-style
+- text-decoration-thickness
+- text-transform: uppercase, lowercase, capitalize
+- text-spacing: text-indent, letter-spacing, line-height, word-spacing, white-space: nowrap
+- text-shadow
+- fonts: serif, sans-serif, monospace, cursive, fantasy
+- fonts safe for web
+- fallback fonts
+- google fonts
