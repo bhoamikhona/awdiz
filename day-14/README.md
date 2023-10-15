@@ -1,0 +1,25 @@
+- overflow
+  - visible (default)
+  - hidden
+  - scroll
+  - auto
+- float (outdated)
+  - left
+  - right
+  - none
+- center align elements
+  - `margin: auto`
+- center an image
+- flexbox
+  - display: flex
+  - justify-content
+    - space-between
+    - space-evenly
+    - space-around
+  - flex-direction
+    - row
+    - row-reverse
+    - column
+    - column-reverse
+  - flex-wrap
+    - wrap

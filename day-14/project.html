@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <script
+      src="https://kit.fontawesome.com/137b9ebb32.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "OnePlus Sans Regular", "Helvetica Neue", Helvetica, Arial,
+          sans-serif, system-ui;
+      }
+
+      #screen {
+        width: 100%;
+        /* border: 5px solid red; */
+      }
+
+      #navbar {
+        width: 100%;
+        /* border: 5px solid blue; */
+        height: 60px;
+      }
+
+      #nav-one {
+        height: 32px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #nav-one > p:nth-child(1) {
+        width: 22%;
+      }
+      #nav-one > p:nth-child(2) {
+        width: 50%;
+      }
+      #nav-one > p:nth-child(3) {
+        width: 22%;
+        text-align: right;
+      }
+
+      #body {
+        width: 100%;
+        height: 1000px;
+        border: 5px solid blue;
+      }
+
+      #footer {
+        width: 100%;
+        height: 200px;
+        border: 5px solid purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen">
+      <div id="navbar">
+        <div id="nav-one">
+          <p></p>
+          <p>
+            Hit ‘Notify Me’ and stand a chance to win a OnePlus Open. Notify Me
+            ›
+          </p>
+          <p><i class="fa-solid fa-x"></i></p>
+        </div>
+        <div id="nav-two">navbar</div>
+      </div>
+      <div id="body">Body</div>
+      <div id="footer">Footer</div>
+    </div>
+  </body>
+</html>
