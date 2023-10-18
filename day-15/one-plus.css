@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+
+  font-family: "OnePlus Sans Regular", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, system-ui;
+  font-size: 1.58rem;
+}
+
+/* generic */
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn--solid {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.8rem 3.8rem;
+  border-radius: 2.2px;
+
+  box-shadow: inset 0 0 0 0 #333;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.btn--solid:hover {
+  box-shadow: inset 400px 0 0 0 #333;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #222;
+  border: 1px solid #222;
+  border-radius: 2.2px;
+
+  box-shadow: inset 0 0 0 0 #ebead8;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.btn--outline:hover {
+  box-shadow: inset 400px 0 0 0 #ebead8;
+}
+
+/* Notification Bar */
+
+.notification-bar {
+  background-color: black;
+  color: white;
+
+  padding: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-message {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.close-icon {
+  align-self: flex-end;
+  margin-right: 0.5rem;
+}
+
+/* Navigation Bar */
+
+.nav {
+  padding-left: 6.4rem;
+  padding-right: 5.2rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav--left {
+  display: flex;
+
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.nav--list {
+  list-style: none;
+
+  display: flex;
+  gap: 2.25rem;
+}
+
+.nav--link:link,
+.nav--link:visited {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.4rem;
+  padding-bottom: 1.7rem;
+}
+
+.nav--link:hover,
+.nav--link:active {
+  border-bottom: 1px solid red;
+}
+
+.nav--icons {
+  gap: 3rem;
+}
+.nav--logo {
+  width: 10.2rem;
+  height: 4.9rem;
+}
+
+/* main */
+
+#slider {
+  background-image: url("./images/diwali_lunch-desktop.jpg.thumb.webp");
+  height: 64rem;
+  width: 192rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+
+  padding-left: 6.3rem;
+  padding-top: 5.4rem;
+  padding-bottom: 4.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.slider--info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.slider--title {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+/* Phone AD */
+
+#phone-ad {
+  background-color: #fffeeb;
+  padding: 5.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-ad--card {
+  width: 131.2rem;
+  height: 45rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.phone-ad--info {
+  height: 45rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.phone-ad--title {
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+
+.fiveG {
+  font-size: 3.2rem;
+}
+
+.phone-ad--info__bottom > :first-child {
+  font-size: 1.4rem;
+  margin-bottom: 2.3rem;
+}
+
+.phone-ad--info__bottom > :nth-child(2) {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.phone-ad--info__bottom > :nth-child(3) {
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.phone-ad--btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.phone-ad--btns > :first-child {
+  padding: 1.25rem 7.8rem;
+}
+
+.phone-ad--btns > :last-child {
+  padding: 1.15rem 7rem;
+}
+
+.phone-ad--image-box {
+  height: 45rem;
+  width: 86.378rem;
+  overflow: hidden;
+}
+
+.phone-ad--image {
+  height: 45rem;
+  width: 86.378rem;
+
+  display: block;
+  transition: all 0.4s;
+}
+
+.phone-ad--image:hover {
+  transform: scale(1.1);
+}
