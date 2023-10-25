@@ -1,0 +1,90 @@
+/* 1360px/16px = 85em */
+@media (max-width: 85em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* 1230px/16px = 76.875em */
+@media (max-width: 76.875em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 1080px/16px = 67.5 */
+@media (max-width: 67.5em) {
+  .wrapper {
+    width: 100rem;
+  }
+
+  .left {
+    height: 35rem;
+  }
+
+  .one-card-row-img,
+  .one-card-row-img-box {
+    height: 35rem;
+  }
+
+  .two-cards-row {
+    flex-direction: column;
+  }
+
+  .light-theme > .wrapper {
+    width: 100rem;
+  }
+}
+
+/* 830px/16px = 51.875em */
+@media (max-width: 51.875em) {
+  .left {
+    align-items: flex-start;
+    height: 45rem;
+    height: 55rem;
+    width: 100%;
+  }
+
+  .one-card-row-img,
+  .one-card-row-img-box {
+    height: 45rem;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left-image {
+    display: flex;
+    height: 26rem;
+  }
+
+  .image-box {
+    width: 100%;
+    height: 26rem;
+  }
+
+  .wrapper {
+    width: 50rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  .tcr--card {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 70rem;
+  }
+
+  .tcr--image-box,
+  .tcr--image {
+    height: 40rem;
+    width: 100%;
+  }
+
+  .light-theme > .wrapper {
+    width: 50rem;
+  }
+}

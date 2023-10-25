@@ -1,0 +1,246 @@
+@import url(https://db.onlinewebfonts.com/c/5cb533fd95e02563bae5a1975cff3f93?family=Slate+For+OnePlus);
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --btn-hover: #eaeaea;
+  --red: #f50913;
+  --blue: #007bff;
+  --grey: #222222;
+  --grey-2: #656565;
+  --grey-3: #f8f8f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Slate For OnePlus", "OnePlus Sans Regular", "Helvetica Neue",
+    Helvetica, Arial, sans-serif, system-ui;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**********************/
+/***** Dark Theme *****/
+/**********************/
+.dark-theme {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  /* border: 2px solid red; */
+  max-width: 131.2rem;
+  margin-top: 5.6rem;
+  margin-bottom: 5.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 5.6rem; */
+}
+
+/* ONE CARD - ROW */
+.one-card-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  margin-bottom: 5.6rem;
+}
+
+.left {
+  height: 45rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+
+.left-image {
+  display: none;
+}
+
+.info {
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.one-card-row-img,
+.one-card-row-img-box {
+  height: 45rem;
+}
+
+.section-title {
+  align-self: flex-start;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 100%;
+  border: none;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 3.2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 400;
+
+  margin-bottom: 3.2rem;
+}
+
+h2 > span {
+  color: var(--red);
+}
+
+.one-card-row-link:link,
+.one-card-row-link:visited {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--white);
+  transition: all 0.3s ease-in-out;
+}
+.one-card-row-link:hover,
+.one-card-row-link:active {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* TWO CARDS - ROW */
+
+.two-cards-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  margin-bottom: 5.6rem;
+}
+
+.tcr--card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--grey);
+
+  height: 40rem;
+  width: 64.599rem;
+}
+
+.tcr--left {
+  padding: 2rem;
+  height: 40rem;
+  width: 31rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tcr--subtitle {
+  color: var(--grey-2);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.tcr--title {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+.tcr--info {
+  margin-bottom: 2rem;
+}
+
+.tcr--image-box,
+.tcr--image {
+  height: 40rem;
+}
+
+/***********************/
+/***** Light Theme *****/
+/***********************/
+.light-theme {
+  background-color: var(--white);
+  color: var(--black);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-theme > .wrapper {
+  width: 131.2rem;
+}
+
+.section-title {
+  color: var(--grey);
+}
+
+.light-theme--hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--btn-hover);
+}
+
+.light-theme--link:link,
+.light-theme--link:visited {
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  transition: all 0.3s ease-in-out;
+}
+.light-theme--link:hover,
+.light-theme--link:active {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.tcr--card-light {
+  background-color: var(--grey-3);
+}

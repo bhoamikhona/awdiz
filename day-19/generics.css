@@ -1,0 +1,38 @@
+/*********************/
+/******* IMAGE *******/
+/*********************/
+.image-zoom-effect {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+.image-box {
+  overflow: hidden;
+}
+
+/**********************/
+/******* BUTTON *******/
+/**********************/
+.btn--light {
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 4rem;
+  cursor: pointer;
+  border: none;
+  height: 4rem;
+  width: 20.9438rem;
+  border-radius: 0.2rem;
+
+  box-shadow: inset 0 0 0 0 var(--btn-hover);
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.btn--light:hover {
+  box-shadow: inset 400px 0 0 0 var(--btn-hover);
+}
