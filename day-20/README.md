@@ -1,0 +1,11 @@
+- Data Types:
+  - Primitive Data Type
+    - String
+      - written within single/double quotes or back ticks
+      - string concatenation
+    - Number
+      - addition
+    - Boolean
+  - Non Primitive Data Type
+- `console.log()`
+- `typeof()`

@@ -1,0 +1,394 @@
+@import url(https://db.onlinewebfonts.com/c/5cb533fd95e02563bae5a1975cff3f93?family=Slate+For+OnePlus);
+
+:root {
+  --white: #ffffff;
+  --page-divider: #eaeaea;
+  --black: #000000;
+  --red: #f50514;
+  --checkbox-grey: #999999;
+  --slider-grey: #efefef;
+  --product-img-bg: #f8f8f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Slate For OnePlus", "OnePlus Sans Regular", "Helvetica Neue",
+    Helvetica, Arial, sans-serif, system-ui;
+  font-weight: 400;
+  background-color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.nav-box {
+  border-bottom: 1px solid var(--page-divider);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-box-ul {
+  padding-top: 3.5rem;
+  list-style: none;
+}
+
+.nav-li-box-hover {
+  width: 130.048rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-box-li {
+  position: relative;
+  min-width: 12.8rem;
+}
+
+.nav-box-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 3.7rem;
+}
+
+.nav-box-link > img {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+.nav-box-li > a {
+  color: rgba(0, 0, 0, 0.95);
+  text-decoration: none;
+}
+
+.red-line {
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.1rem;
+  z-index: 3;
+  background-color: var(--red);
+  transition: 0.2s cubic-bezier(0.5, 0.15, 0, 1);
+}
+
+.nav-box-li:hover > .red-line {
+  width: 100%;
+  background-color: red;
+}
+
+.red-line-active {
+  width: 100%;
+}
+
+/* Main Box */
+
+.category-list-main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box--wrapper {
+  width: 144rem;
+
+  display: flex;
+}
+
+.content-left {
+  width: 37.7rem;
+  padding: 3.2rem 4rem 3.2rem 3.2rem;
+  border-right: 1px solid var(--page-divider);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sort-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  margin-bottom: 4.8rem;
+}
+
+.sort-title {
+  font-size: 1.8rem;
+}
+
+.sort-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sort-input:hover {
+  cursor: pointer;
+}
+
+.sort-input > label {
+  cursor: pointer;
+  /* font-size: 1.4rem; */
+}
+
+.sort-input > label > sup {
+  color: var(--red);
+  font-size: 1.2rem;
+}
+
+.sort-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 1px solid var(--checkbox-grey);
+  border-radius: 2px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"]:hover {
+  border: 1px solid var(--red);
+}
+
+input[type="checkbox"]:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 1.1rem;
+  /* padding: 0.3rem; */
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: 2px;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--red);
+}
+
+input[type="checkbox"]:checked:after {
+  display: flex;
+}
+
+.view-more > .down-arrow {
+  transition: 0.2s cubic-bezier(0.5, 0.15, 0, 1);
+}
+
+.view-more:hover {
+  cursor: pointer;
+}
+
+.view-more:hover > .down-arrow {
+  transform: rotate(-180deg);
+}
+
+.range-slider {
+  position: relative;
+  /* width: 100%; */
+  height: 0.5rem;
+  background-color: var(--slider-grey);
+  width: 25.2rem;
+
+  margin-top: 2rem;
+}
+
+.slider-track {
+  height: 100%;
+  position: absolute;
+  background-color: #fe696a;
+  /* border: 2px solid red; */
+}
+
+.range-slider input {
+  position: absolute;
+  width: 100%;
+  width: 25.2rem;
+  background: none;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  appearance: none;
+}
+
+/* FIXME: min-val slider not working properly */
+input[type="range"]::-webkit-slider-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: var(--red);
+  pointer-events: auto;
+  appearance: none;
+  cursor: pointer;
+}
+
+.price-labels {
+  margin-top: 4rem;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.availability {
+  margin-top: 4.8rem;
+}
+
+.content-right {
+  padding: 1.4rem 6.4rem 6.4rem 2rem;
+  padding: 3.2rem 4rem 3.2rem 2rem;
+}
+
+.filter {
+  color: #828282;
+  margin-bottom: 2rem;
+}
+
+.filter > span {
+  color: var(--black);
+  cursor: pointer;
+}
+
+.filter > span > .down-arrow {
+  transition: 0.2s cubic-bezier(0.5, 0.15, 0, 1);
+}
+
+.filter > span:hover > .down-arrow {
+  transform: rotate(-180deg);
+}
+
+.products {
+  display: grid;
+  /* place-items: center; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.product--img {
+  max-width: 31.3rem;
+  background-color: var(--product-img-bg);
+}
+
+.product--name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product--discount {
+  color: var(--red);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.product--discount > span {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.btn__product--price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  width: 31.3rem;
+  height: 4rem;
+  transition: 0.2s cubic-bezier(0.5, 0.15, 0, 1);
+}
+
+.product--card:hover {
+  cursor: pointer;
+}
+
+.product--card:hover > .btn__product--price {
+  background-color: var(--black);
+  color: var(--white);
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn__product--price:hover {
+  background-color: var(--black);
+  color: var(--white);
+  justify-content: center;
+}
+
+.product--new {
+  position: relative;
+}
+
+.product--new::after {
+  content: "NEW";
+  position: absolute;
+  top: 1.3rem;
+  left: 1.5rem;
+  color: var(--red);
+  font-size: 1.4rem;
+}
+
+.out-of-stock {
+  position: relative;
+}
+
+.out-of-stock > img {
+  opacity: 0.1;
+  background-color: var(--checkbox-grey);
+}
+
+.out-of-stock::after {
+  content: "Out of Stock";
+  color: #666;
+  position: absolute;
+
+  top: 14rem;
+  left: 11rem;
+
+  border: 1px solid #666;
+  padding: 0.5rem;
+
+  border-radius: 2px;
+
+  font-size: 1.2rem;
+}
+
+/* 1400px/16px = 87.5em */
+@media (max-width: 87.5em) {
+  .main-box--wrapper {
+    flex-direction: column;
+  }
+}

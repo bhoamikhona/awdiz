@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnePlus Phone Page Clone</title>
+
+    <!-- Font Awesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/137b9ebb32.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="category-list-nav">
+        <div class="nav-box">
+          <ul class="nav-box-ul">
+            <div class="nav-li-box-hover">
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EA-CpgM7WLejuqARha3AABPSqotiPU419.svg"
+                    alt="Category All"
+                  />
+                  <span class="link-text">All</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/india-oneplus-statics-file/epb/202306/19/hpMRKnU28yqTPgbW.svg"
+                    alt="Category Mobile"
+                  />
+                  <span class="link-text">Mobile</span>
+                </a>
+                <div class="red-line red-line-active"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/india-oneplus-statics-file/epb/202306/20/XtcE5oICln4cy6Z9.svg"
+                    alt="Category Tablet"
+                  />
+                  <span class="link-text">Tablet</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EE-CpgM7mLej0OAd30UAAAEn90kSbw414.svg"
+                    alt="Category TV & Display"
+                  />
+                  <span class="link-text">TV & Display</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EE-CpgM7mLej1CAJ1GYAAAJTrg6_6k449.svg"
+                    alt="Category Audio"
+                  />
+                  <span class="link-text">Audio</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EE-CpgM7mLek3SAVKlUAAAJrOjtRsE386.svg"
+                    alt="Category Wearables"
+                  />
+                  <span class="link-text">Wearables</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EB-CpgM7WLemSOAVZHfAAAHIhrU0X4975.svg"
+                    alt="Category Cases & Protection"
+                  />
+                  <span class="link-text">Cases & Protection</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EB-CpgM7WLemTiAbp3qAAANdnLfx7U256.svg"
+                    alt="Category Bundles"
+                  />
+                  <span class="link-text">Bundles</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/26/1-M00-3D-F5-CpgM7WLfV6aAMkA9AAAbyMoX6a0350.svg"
+                    alt="Category Power & Cables"
+                  />
+                  <span class="link-text">Power & Cables</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+              <li class="nav-box-li">
+                <a href="#" class="nav-box-link">
+                  <img
+                    src="https://image01-in.oneplus.net/ebp/202207/25/1-M00-3D-EE-CpgM7mLek_eAMPwPAAAP4ullc20989.svg"
+                    alt="Category Gear"
+                  />
+                  <span class="link-text">Gear</span>
+                </a>
+                <div class="red-line"></div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </section>
+
+      <section class="category-list-main-box">
+        <div class="main-box--wrapper">
+          <section class="content-left">
+            <div class="sort-box">
+              <p class="sort-title">Series</p>
+              <div class="sort-choice">
+                <div class="sort-input">
+                  <input type="checkbox" id="flagship-series" />
+                  <label for="flagship-series"
+                    >Flagship Series <sup>New</sup></label
+                  >
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="nord-series" />
+                  <label for="nord-series">Nord Series <sup>New</sup></label>
+                </div>
+              </div>
+            </div>
+            <div class="sort-box">
+              <p class="sort-title">Offers</p>
+              <div class="sort-choice">
+                <div class="sort-input">
+                  <input type="checkbox" id="on-sale" />
+                  <label for="on-sale">On Sale <sup>New</sup></label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="with-gift" />
+                  <label for="with-gift">With Gift</label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="red-coins" />
+                  <label for="red-coins">Save with RedCoins</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort-box">
+              <p class="sort-title">RAM/Storage</p>
+              <div class="sort-choice">
+                <div class="sort-input">
+                  <input type="checkbox" id="6-128" />
+                  <label for="6-128">6+128 GB</label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="8-128" />
+                  <label for="8-128">8+128 GB</label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="6-256" />
+                  <label for="6-256">8+256 GB</label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="12-256" />
+                  <label for="12-256">12+256 GB</label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="16-256" />
+                  <label for="16-256">16+256 GB</label>
+                </div>
+                <div class="sort-input">
+                  <input type="checkbox" id="16-512" />
+                  <label for="16-512">16+512 GB</label>
+                </div>
+                <p class="view-more">
+                  <i class="fa-solid fa-chevron-down fa-sm down-arrow"></i>
+                  &nbsp; View 1 more
+                </p>
+              </div>
+            </div>
+
+            <div class="sort-box">
+              <p class="sort-title">Price Range</p>
+              <label for="price-range">₹0 - ₹99,999</label>
+              <div class="range-slider">
+                <span class="slider-track"></span>
+                <!-- FIXME: min-val slider not working properly -->
+                <input
+                  type="range"
+                  name="min_val"
+                  class="min-val"
+                  min="0"
+                  max="99999"
+                  value="0"
+                />
+                <input
+                  type="range"
+                  name="max_val"
+                  class="max-val"
+                  min="0"
+                  max="99999"
+                  value="99999"
+                />
+
+                <div class="price-labels">
+                  <span>₹0</span>
+                  <span>₹99,999</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort-box availability">
+              <p class="sort-title">Availability</p>
+              <div class="sort-choice">
+                <div class="sort-input">
+                  <input type="checkbox" id="in-stock" />
+                  <label for="in-stock">In Stock </label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="content-right">
+            <p class="filter">
+              Rank by
+              <span
+                >Newest <i class="fa-solid fa-chevron-down fa-sm down-arrow"></i
+              ></span>
+            </p>
+
+            <div class="products">
+              <div class="product--card product--new">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202310/17/1-m00-52-39-cpgm7muuomkaeziaaale9r-nxtm551.png?x-amz-process=image/format"
+                  alt="OnePlus Open"
+                />
+                <p class="product--name">OnePlus Open</p>
+                <p class="product--discount">6% OFF <span>| With Gift</span></p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹139,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202305/31/1-m00-51-66-cpgm7wr26omaegnzaaniaca13ya555.png?x-amz-process=image/format"
+                  alt="OnePlus 11R 5G"
+                />
+                <p class="product--name">OnePlus 11R 5G</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹39,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202306/25/1-m00-51-88-cpgm7wsykruahbobaardu7ablie779.png?x-amz-process=image/format"
+                  alt="OnePlus Nord CE3 5G"
+                />
+                <p class="product--name">OnePlus Nord CE3 5G</p>
+                <p class="product--discount">Save up to ₹1,000 with RedCoins</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹26,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202306/25/1-m00-51-8b-cpgm7msyk4oagsgzaav1tw1typs077.png?x-amz-process=image/format"
+                  alt="OnePlus Nord 3 5G"
+                />
+                <p class="product--name">OnePlus Nord 3 5G</p>
+                <p class="product--discount">
+                  Save up to ₹1,500 with RedCoins <span>| With Gift</span>
+                </p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹33,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202302/08/1-m00-4e-13-cpgm7wpjxnkafjigaanmzr5p60g956.png?x-amz-process=image/format"
+                  alt="OnePlus 11 5G"
+                />
+                <p class="product--name">OnePlus 11 5G</p>
+                <p class="product--discount">
+                  <span>With Gift</span>
+                </p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹56,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202303/29/1-m00-51-00-cpgm7mqj5rqaikfqaalqdgz2zra230.png?x-amz-process=image/format"
+                  alt="OnePlus Nord CE 3 Lite 5G"
+                />
+                <p class="product--name">OnePlus Nord CE 3 Lite 5G</p>
+                <p class="product--discount">Save up to ₹500 with RedCoins</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹19,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01.oneplus.net/ebp/202204/26/1-m00-3a-03-rb8bwmjn0e2adqn9aall0erz9ts837.png?x-amz-process=image/format"
+                  alt="OnePlus Nord CE 2 Lite 5G"
+                />
+                <p class="product--name">OnePlus Nord CE 2 Lite 5G</p>
+                <p class="product--discount">Up to 10% OFF</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹17,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202207/11/1-m00-3c-e0-cpgm7wll9c2absdqaamvuvxwc5u151.png?x-amz-process=image/format"
+                  alt="OnePlus 10 Pro 5G"
+                />
+                <p class="product--name">OnePlus 10 Pro 5G</p>
+                <p class="product--discount">Up to 20% OFF</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹52,999
+                </button>
+              </div>
+
+              <div class="product--card">
+                <img
+                  class="product--img"
+                  src="https://image01.oneplus.net/ebp/202103/12/1-m00-21-ef-rb8lb2blkswagziiaah2c1tzkyo108.png?x-amz-process=image/format"
+                  alt="OnePlus 9R 5G"
+                />
+                <p class="product--name">OnePlus 9R 5G</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹39,999
+                </button>
+              </div>
+
+              <div class="product--card out-of-stock">
+                <img
+                  class="product--img"
+                  src="https://image01-in.oneplus.net/ebp/202207/14/1-m00-3d-17-cpgm7mlpjwsads8taasa55twgmg132.png?x-amz-process=image/format"
+                  alt="OnePlus 10T 5G"
+                />
+                <p class="product--name">OnePlus 10T 5G</p>
+                <p class="product--discount">Up to 20% OFF</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹39,999
+                </button>
+              </div>
+
+              <div class="product--card out-of-stock">
+                <img
+                  class="product--img"
+                  src="https://image01.oneplus.net/ebp/202204/26/1-m00-3a-03-rb8bwmjnz4aawz6aaaorqdzzzgk130.png?x-amz-process=image/format"
+                  alt="OnePlus 10R 5G"
+                />
+                <p class="product--name">OnePlus 10R 5G</p>
+                <p class="product--discount">Up to 28% OFF</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹27,999
+                </button>
+              </div>
+
+              <div class="product--card out-of-stock">
+                <img
+                  class="product--img"
+                  src="https://image01.oneplus.net/ebp/202103/12/1-m00-21-ef-rb8lb2blj_eah4rsaahmeobqcb4967.png?x-amz-process=image/format"
+                  alt="OnePlus 9 5G"
+                />
+                <p class="product--name">OnePlus 9 5G</p>
+                <p class="product--discount">Up to 24% OFF</p>
+                <button class="btn__product--price">
+                  <i class="fa-solid fa-cart-shopping"></i> ₹37,999
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
