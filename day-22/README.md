@@ -1,0 +1,30 @@
+- Functions
+  - Pre-defined function
+  - User created function
+- `console.log()`
+- `typeof()`
+- Data Types
+  - String
+  - Number
+  - Boolean
+    - `true`
+    - `false`
+  - Undefined
+- Variables
+  - `var`
+- Arithmetic Operators
+  - `+`
+  - `-`
+  - `*`
+  - `/`
+  - `%`
+- Comparison Operators
+  - `==` - checks data only
+  - `===` - strict comparsion i.e. checks data and data type
+  - `>`
+  - `<`
+  - `>=`
+  - `<=`
+- Logical Operators
+  - `&&` - all conditions must be true then it will return true, otherwise false.
+  - `||` - even if one condition is true then it will return true, and when all conditions are false, then it will return false.
