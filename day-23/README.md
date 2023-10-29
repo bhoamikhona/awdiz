@@ -1,0 +1,15 @@
+- Conditional Statement
+  - if-else statement
+  - if-else/if-else
+  - switch statement
+  - When you have a lot of conditions, use switch otherwise use if/else
+- Code Blocks - written within `{  }`
+- Undefined
+- Array
+  - non-primitive data type
+  - can contain multiple data types
+  - nested array
+  - accessing array elements
+  - `length` - to get array's length i.e. number of elements in an array
+  - `push()` - add new elements to an array
+  - `pop()` - removes the last element of an array
