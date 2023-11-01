@@ -1,0 +1,6 @@
+- Array Methods:
+  - `shift()` - removes first element of the array
+  - `unshift()` - adds an element to beginning of an array
+- Loops
+  - for loop
+- `i = i + 1` is the same as `i++`
