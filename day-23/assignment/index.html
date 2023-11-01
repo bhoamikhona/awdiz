@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnePlus Product Page Clone</title>
+
+    <!-- Font Awesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/137b9ebb32.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="grid-wrapper">
+        <section class="product-img">
+          <img
+            class="open-img"
+            src="./images/phone-img-1.webp"
+            alt="phone image 1"
+          />
+
+          <div class="tools">
+            <div class="thumbnails">
+              <img
+                class="thumbnail"
+                src="./images/phone-img-1.webp"
+                alt="phone image 1"
+              />
+              <img
+                class="thumbnail"
+                src="./images/phone-img-2.webp"
+                alt="phone image 2"
+              />
+              <img
+                class="thumbnail"
+                src="./images/phone-img-3.webp"
+                alt="phone image 3"
+              />
+              <img
+                class="thumbnail"
+                src="./images/phone-img-4.webp"
+                alt="phone image 4"
+              />
+              <img
+                class="thumbnail"
+                src="./images/phone-img-5.webp"
+                alt="phone image 5"
+              />
+            </div>
+            <div class="more-info">
+              <button><i class="fa-solid fa-bars"></i> &nbsp; Specs</button>
+              <span class="small-vertical-bar"></span>
+              <button><i class="fa-solid fa-bars"></i> &nbsp; Compare</button>
+            </div>
+          </div>
+        </section>
+        <section class="product-info">
+          <!-- Product Info - Main Details -->
+          <div class="product-main-details">
+            <h1 class="product-title">OnePlus Open</h1>
+            <p class="colorNram">Emerald Dusk | 16 GB RAM + 512 GB Storage</p>
+            <p class="percent-off">6% off</p>
+            <div class="price-container">
+              <div class="price-container--left">
+                <p class="current-price">₹139,999</p>
+                <p class="original-price">
+                  M.R.P. <span class="line-through">₹149,999</span> (inclusive
+                  of all taxes)
+                </p>
+              </div>
+              <button class="btn--outline__red">
+                See Offers &nbsp; <i class="fa-solid fa-arrow-down"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Info - Specs -->
+          <div class="product-specs">
+            <p>Color: Emerald Dusk</p>
+            <div class="color-choices">
+              <img
+                src="./images/emerald-dusk.jpg"
+                alt="emerald dusk color choice"
+                class="color-choice"
+              />
+              <img
+                src="./images/voyager-black.jpg"
+                alt="voyager black color choice"
+                class="color-choice"
+              />
+            </div>
+
+            <p>ROM</p>
+            <button class="btn--rom">16 GB RAM + 512 GB Storage</button>
+          </div>
+
+          <!-- Product Info - Trade In -->
+          <div class="product-trade-in">
+            <p class="subsection-title">Buy with Exchange</p>
+            <p class="subsection-subtitle">
+              Save more upon exchange with old devices.
+            </p>
+
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i> &nbsp;
+              <a class="address-link" href="#">Enter address to exchange</a>
+            </div>
+            <a class="link" href="#">How does Exchange work?</a>
+          </div>
+
+          <!-- Product Info - Exclusive Price -->
+          <div class="exclusive-price">
+            <p class="subsection-title">Exclusive price for you</p>
+            <p class="subsection-subtitle">Calculate how much you can save</p>
+
+            <div class="input-control">
+              <input type="checkbox" id="save" />
+              <label for="save"
+                >Save up to ₹6,000 additional with exchange bonus</label
+              >
+            </div>
+
+            <p class="bank-offers subsection-subtitle">Bank Offers</p>
+
+            <div class="bank-cards">
+              <div class="bank-card">
+                <img
+                  class="bank-logo"
+                  src="./images/icici.svg"
+                  alt="bank logo"
+                />
+                <p class="bank-info">
+                  Up to ₹5000 Instant discount on ICICI Bank Credit Cards and
+                  Credit/Debit EMI. Min Transaction Value: ₹90,000.
+                </p>
+                <a href="#" class="link bank-link">Detail</a>
+              </div>
+
+              <div class="bank-card">
+                <img
+                  class="bank-logo"
+                  src="./images/one-card.svg"
+                  alt="bank logo"
+                />
+                <p class="bank-info">
+                  Up to ₹5000 Instant discount on OneCard EMIs and Credit Card
+                  transactions. Min Transaction Value: ₹90,000.
+                </p>
+                <a href="#" class="link bank-link">Detail</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info - Benefits -->
+          <div class="benefits">
+            <p class="subsection-title">Benefits</p>
+            <div class="benefit-checkboxes">
+              <div class="input-control">
+                <input
+                  style="opacity: 0.5"
+                  type="checkbox"
+                  id="red-coins"
+                  disabled
+                  checked
+                />
+                <label style="opacity: 0.5" for="red-coins"
+                  >Earn 1407 RedCoins</label
+                >
+              </div>
+              <div class="input-control">
+                <input type="checkbox" id="exchange-bonus" checked />
+                <label for="exchange-bonus"
+                  >Get Exchange Bonus of up to ₹5000.</label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="additional-bonus" checked />
+                <label for="additional-bonus"
+                  >Additional Exchange Bonus of ₹1000 for OnePlus RCC
+                  Members.</label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="live-demo" checked />
+                <label for="live-demo"
+                  >Take live demo with OnePlus Specialist.
+                  <a class="link" href="#">Join Now</a></label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="accidental-protection" checked />
+                <label for="accidental-protection"
+                  >Scroll down & add Accidental Protection Plan at 70% off with
+                  OnePlus Open.</label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="screen-protection" checked />
+                <label for="screen-protection"
+                  >Scroll down & add Screen Protection Plan at 20% off with
+                  OnePlus Open.</label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="jio-plus" checked />
+                <label for="jio-plus"
+                  >Benefits worth ₹15000 with JioPlus ₹699 Postpaid plan.
+                  <a href="#" class="link">T&C ›</a></label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="red-cable" checked />
+                <label for="red-cable"
+                  >Buy the all new OnePlus Open and link it to the Red Cable
+                  Club to get coupons worth ₹9999.
+                  <a href="#" class="link">T&C ›</a></label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="spotify" checked />
+                <label for="spotify"
+                  >Get 6-month Spotify Premium subscription for free.
+                  <a href="#" class="link">Steps to redeem ›</a></label
+                >
+              </div>
+
+              <div class="input-control">
+                <input type="checkbox" id="youtube" checked />
+                <label for="youtube"
+                  >Get 6-month YouTube Premium subscription for free.
+                  <a href="#" class="link">T&C ›</a></label
+                >
+              </div>
+            </div>
+
+            <p class="bundle">Bundle add-ons at <span>up to 33% OFF</span></p>
+
+            <div class="bundle-products">
+              <div class="top">
+                <img
+                  src="./images/earphones.png"
+                  alt="earphones"
+                  class="bundle-product"
+                />
+                <img
+                  src="./images/tablet.png"
+                  alt="tablet"
+                  class="bundle-product"
+                />
+                <img
+                  src="./images/earphones2.png"
+                  alt="earphones"
+                  class="bundle-product"
+                />
+                <img
+                  src="./images/tablet2.png"
+                  alt="tablet"
+                  class="bundle-product"
+                />
+              </div>
+              <div class="bottom">
+                <button class="btn--add-on">Choose add-ons</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info - Protection Plan -->
+          <div class="protection-plan">
+            <p class="subsection-title">Protection Plan</p>
+
+            <div class="protection-plan--box">
+              <p>Accidental Damage Protection Plan</p>
+              <button class="btn--outline__red">Popular</button>
+              <button class="btn--outline__red">70% off</button>
+              <p>
+                <!-- FIXME: don't use inline styling -->
+                <span style="color: #333">₹2,100</span>
+                <span class="line-through">₹6,999</span> (Tax included) /12
+                Months
+              </p>
+              <ol>
+                <li>
+                  Covers the damages to the phone by all accidental drop, crash,
+                  breakage, or liquid.
+                </li>
+                <li>
+                  To buy the Protection Plan, you need to read and agree to the
+                  Product Summary and Terms and Conditions.
+                </li>
+              </ol>
+            </div>
+
+            <button class="btn--show-more">
+              Show more &nbsp; <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <!-- Product Info - Delivery -->
+          <div class="delivery">
+            <p class="subsection-title">Delivery</p>
+            <div class="fastest">
+              <i class="fa-solid fa-truck-fast"></i>
+              <div class="fastest-details">
+                <span>Fastest:</span>
+                <p>Monday, Nov 6</p>
+                <p>(if you order by 13:00 PM)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="misc">
+            <button class="btn--location">
+              <i class="fa-solid fa-location-dot"></i> &nbsp; Add PIN to see
+              accurate delivery time
+            </button>
+
+            <div class="join-now">
+              <div class="join-now--box">
+                <p class="join-now--subtitle">Still have questions?</p>
+                <p class="join-now--title">
+                  Join a live demo hosted by OnePlus specialists
+                </p>
+              </div>
+              <a href="#" class="join-now--link">Join now</a>
+            </div>
+
+            <div class="policies">
+              <div class="replacement">
+                <div>
+                  <i class="fa-solid fa-book-open"></i> &nbsp;
+                  <p>Extended Replacement Policy</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <div class="warranty">
+                <div>
+                  <i class="fa-solid fa-shield-halved"></i> &nbsp;
+                  <p>1 Year Warranty</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="payments">
+            <p class="subsection-title">Payments</p>
+            <div class="payments-images">
+              <img
+                src="./images/visa.png"
+                alt="visa"
+                class="payment-type-img"
+              />
+              <img
+                src="./images/mastercard.png"
+                alt="mastercard"
+                class="payment-type-img"
+              />
+              <img
+                src="./images/amex.svg"
+                alt="amex"
+                class="payment-type-img"
+              />
+              <img
+                src="./images/paytm.png"
+                alt="paytm"
+                class="payment-type-img"
+              />
+              <img
+                src="./images/gpay.png"
+                alt="gpay"
+                class="payment-type-img"
+              />
+              <img src="./images/upi.png" alt="upi" class="payment-type-img" />
+            </div>
+          </div>
+
+          <div class="shipping">
+            <p class="subsection-title">Shipping</p>
+            <div class="shipping-images">
+              <img
+                src="./images/bluedart.svg"
+                alt="blue dart"
+                class="shipping-img"
+              />
+              <img
+                src="./images/delhivery.svg"
+                alt="delhivery"
+                class="shipping-img"
+              />
+            </div>
+          </div>
+
+          <div class="witb">
+            <p class="subsection-title">What's in the box</p>
+            <div class="witb-box-container">
+              <div class="witb-box">
+                <img
+                  src="./images/oneplus-open.webp"
+                  alt="one plus open"
+                  class="witb-img"
+                />
+                <p class="witb-text">OnePlus Open</p>
+              </div>
+              <div class="witb-box">
+                <img
+                  src="./images/protective-case.webp"
+                  alt="protective case"
+                  class="witb-img"
+                />
+                <p class="witb-text">OnePlus Open</p>
+              </div>
+              <div class="witb-box">
+                <img
+                  src="./images/power-adapter.webp"
+                  alt="Power Adapter"
+                  class="witb-img"
+                />
+                <p class="witb-text">OnePlus Open</p>
+              </div>
+              <div class="witb-box">
+                <img src="./images/cable.webp" alt="Cable" class="witb-img" />
+                <p class="witb-text">OnePlus Open</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="product-station">
+        <div class="product-station-wrapper">
+          <div class="grid-wrapper-cards">
+            <div class="box box-1 dark small">
+              <p class="box-title">
+                Light and compact. It's Pro sizing on a fold.
+              </p>
+              <p class="box-text">
+                Lighter than any Fold at 239 grams, weighs just like a Pro Max.
+                The Open is all sized up for a familiar hold.
+              </p>
+            </div>
+            <div class="box box-2 dark large">
+              <p class="box-title">
+                Extraordinary materials blend the best of both.
+              </p>
+              <p class="box-text">
+                Titanium alloy, carbon fiber, and more. Built to the hilt with
+                aerospace-grade materials up to 4 times stronger than
+                surgical-grade stainless steel.
+              </p>
+            </div>
+          </div>
+          <div class="grid-wrapper-cards-reverse">
+            <div class="box box-3 light large">
+              <p class="box-title">ProXDR displays, in and out.</p>
+              <p class="box-text">
+                2K resolution, 120Hz and peak brightness of 2800 nits, both
+                AMOLED displays are perfected for Dolby Vision. Brighter and
+                sharper than your average Pro phone or tablet.
+              </p>
+            </div>
+            <div class="box box-4 light small">
+              <p class="box-title">Game-changing multitasking</p>
+              <p class="box-text">
+                With Open Canvas on OxygenOS13.2, extend split-screen apps and
+                flow beyond the display. The screen giant upsizes your
+                possibilities with more real estate.
+              </p>
+            </div>
+          </div>
+          <div class="grid-wrapper-cards">
+            <div class="box box-5 dark small">
+              <p class="box-title">Hasselblad Camera for Fold.</p>
+              <p class="box-text">
+                48MP SONY LYT-T808 "Pixel Stacked" Sensor. Light up the night
+                with dynamic range and light intake on par with traditional IMX
+                1-inch smartphone sensors.
+              </p>
+            </div>
+            <div class="box box-6 light large">
+              <p class="box-title">
+                OnePlus Fast and Smooth. More power than you can handle.
+              </p>
+              <p class="box-text">
+                Snapdragon® 8 Gen 2. 16GB LPDDR5X RAM accelerated by RAM-Vita.
+                512GB UFS4.0 ROM. 4805 mAh battery. 67W Charging.
+              </p>
+            </div>
+          </div>
+          <a class="project-station--learn-more" href="#"
+            >Learn More &nbsp; <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+      </section>
+      <section class="product-faq">
+        <div class="faq-wrapper">
+          <p class="faq-heading">FAQ</p>
+
+          <div class="faq-boxes">
+            <div class="faq-box">
+              <p class="faq-text">What payment method I could choose?</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-box">
+              <p class="faq-text">When will I receive my order?</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-box">
+              <p class="faq-text">
+                What is the warranty policy for the OnePlus Open device?
+              </p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-box">
+              <p class="faq-text">How can I find a service in India?</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-box">
+              <p class="faq-text">
+                After I have completed the online purchase, when can I pick up
+                the product(s) in store?
+              </p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-box">
+              <p class="faq-text">
+                What information is required for in-store pickup verification?
+              </p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
