@@ -1,0 +1,4 @@
+- Functions with Parameters
+- Writing function as a variable e.g. `var myFunc = function() {}`
+- `return` keyword
+- difference between `return` and `console.log()`
