@@ -1,0 +1,133 @@
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --grey-1: #f5f5f5;
+  --grey-2: #e5e5e5;
+  --grey-3: #d8d4d4;
+  --grey-4: #757575;
+  --grey-5: #cacacb;
+  --grey-6: #9e9ea0;
+  --grey-7: #707072;
+  --grey-8: #666b71;
+  --grey-9: #7e7e7e;
+
+  --podium-cds-breakpoint-xs: 320px;
+  --podium-cds-breakpoint-s: 600px;
+  --podium-cds-breakpoint-m: 960px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Now Display Medium", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.75;
+  color: var(--black);
+  text-align: center;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  max-width: 96%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 25px;
+}
+
+.btn-dark {
+  border: 0.1rem solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  opacity: 0.5;
+}
+
+.btn-light {
+  border: 0.1rem solid var(--white);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn-light:hover {
+  border: 0.1rem solid var(--grey-6);
+  background-color: var(--grey-6);
+}
+
+.btn-underline {
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.2rem solid var(--black);
+  cursor: pointer;
+}
+
+.btn-underline:hover {
+  opacity: 0.5;
+}
+
+.carousel-controls {
+  margin-bottom: 1.2rem;
+
+  align-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.carousel-control {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 100%;
+  font-size: 2.4rem;
+
+  background-color: var(--grey-2);
+  color: var(--black);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control:hover {
+  background-color: var(--grey-5);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike HomePage Clone</title>
+
+    <!-- ion icons -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="secondary-nav">
+        <div class="secondary-nav-logo-box">
+          <svg height="24px" width="24px" fill="#111" viewBox="0 0 26 32">
+            <path
+              d="M14.4 5.52v-.08q0-.56.36-1t.92-.44 1 .36.48.96-.36 1-.96.4l-.24.08.08.12-.08.44-.16 1.28q.08.08.08.16l-.16.8q-.08.16-.16.24l-.08.32q-.16.64-.28 1.04t-.2.64V12q-.08.4-.12.64t-.28.8q-.16.32 0 1.04l.08.08q0 .24.2.56t.2.56q.08 1.6-.24 2.72l.16.48q.96.48.56 1.04l.4.16q.96.48 1.36.84t.8.76q.32.08.48.24l.24.08q1.68 1.12 3.36 2.72l.32.24v.08l-.08.16.24.16h.08q.24.16.32.16h.08q.08 0 .16-.08l.16-.08q.16-.16.32-.24h.32q.08 0 0 .08l-.32.16-.4.48h.56l.56.08q.24-.08.4-.16l.4-.24q.24-.08.48.16h.08q.08.08-.08.24l-.96.88q-.4.32-.72.4l-1.04.72q-.08.08-.16 0l-.24-.32-.16-.32-.2-.28-.24-.32-.2-.24-.16-.2-.32-.24q-.16 0-.32-.08l-1.04-.8q-.24 0-.56-.24-1.2-1.04-1.6-1.28l-.48-.32-.96-.16q-.48-.08-1.28-.48l-.64-.32q-.64-.32-.88-.32l-.32-.16q-.32-.08-.48-.16l-.16-.16q-.16 0-.32.08l-1.6.8-2 .88q-.8.64-1.52 1.04l-.88.4-1.36.96q-.16.16-.32 0l-.16.16q-.24.08-.32.08l-.32.16v.16h-.16l-.16.24q-.16.32-.32.36t-.2.12-.08.12l-.16.16-.24.16-.36-.04-.48.08-.32.08q-.4.08-.64-.12t-.4-.6q-.16-.24.16-.4l.08-.08q.08-.08.24-.08h.48L1.6 26l.32-.08q0-.16.08-.24.08-.08.24-.08v-.08q-.08-.16-.08-.32-.08-.16-.04-.24t.08-.08h.04l.08.24q.08.4.24.24l.08-.16q.08-.16.24-.16l.16.16.16-.16-.08-.08q0-.08.08-.08l.32-.32q.4-.48.96-.88 1.12-.88 2.4-1.36.4-.4.88-.4.32-.56.96-1.2.56-.4.8-.56.16-.32.4-.32H10l.16-.16q.16-.08.24-.16v-.4q0-.4.08-.64t.4-.24l.32-.32q-.16-.32-.16-.72h-.08q-.16-.24-.16-.48-.24-.4-.32-.64h-.24q-.08.24-.4.32l-.08.16q-.32.56-.56.84t-.88.68q-.4.4-.56.88-.08.24 0 .48l-.08.16h.08q0 .16.08.16h.08q.16.08.16.2t-.24.08-.36-.16-.2-.12l-.24.24q-.16.24-.32.2t-.08-.12l.08-.08q.08-.16 0-.16l-.64.16q-.08.08-.2 0t.04-.16l.4-.16q0-.08-.08-.08-.32.16-.64.08l-.4-.08-.08-.08q0-.08.08-.08.32.08.8-.08l.56-.24.64-.72.08-.16q.32-.64.68-1.16t.76-.84l.08-.32q.16-.32.32-.56t.4-.64l.24-.32q.32-.48.72-.48l.24-.24q.08-.08.08-.24l.16-.16-.08-.08q-.48-.4-.48-.72-.08-.56.36-.96t.88-.36.68.28l.16.16q.08 0 .08.08l.32.16v.24q.16.16.16.24.16-.24.48-.56l.4-1.28q0-.32.16-.64l.16-.24v-.16l.24-.96h.16l.24-.96q.08-.24 0-.56l-.32-.8z"
+            ></path>
+          </svg>
+        </div>
+
+        <ul class="secondary-nav-list">
+          <li>
+            <a class="secondary-nav-link" href="#">Find a Store</a>
+          </li>
+          <span class="separator">|</span>
+          <li>
+            <a class="secondary-nav-link" href="#">Help</a>
+          </li>
+          <span class="separator">|</span>
+          <li>
+            <a class="secondary-nav-link" href="#">Join Us</a>
+          </li>
+          <span class="separator">|</span>
+          <li>
+            <a class="secondary-nav-link" href="#">Sign In</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="main-nav">
+        <div class="main-nav-logo-box">
+          <svg
+            aria-hidden="true"
+            class="pre-logo-svg"
+            focusable="false"
+            viewBox="0 0 24 24"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="main-nav--middle">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="#">New & Featured</a></li>
+            <li><a class="main-nav-link" href="#">Men</a></li>
+            <li><a class="main-nav-link" href="#">Women</a></li>
+            <li><a class="main-nav-link" href="#">Kids</a></li>
+            <li><a class="main-nav-link" href="#">Sale</a></li>
+            <li><a class="main-nav-link" href="#">Customise</a></li>
+            <li><a class="main-nav-link" href="#">SNKRS</a></li>
+          </ul>
+        </div>
+
+        <div class="main-nav--right">
+          <div class="search-bar">
+            <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            <input class="search-field" type="text" placeholder="Search" />
+          </div>
+          <ion-icon class="nav-icon" name="heart-outline"></ion-icon>
+          <ion-icon class="nav-icon" name="bag-outline"></ion-icon>
+        </div>
+
+        <div class="mobile-nav">
+          <ion-icon class="nav-icon" name="search-outline"></ion-icon>
+          <ion-icon class="nav-icon" name="bag-outline"></ion-icon>
+          <ion-icon class="nav-icon" name="person-outline"></ion-icon>
+          <ion-icon class="nav-icon" name="menu-outline"></ion-icon>
+        </div>
+      </nav>
+
+      <div class="notification">
+        <span>Hello Nike App</span>
+        <p>
+          Download the app to access everything Nike.&nbsp;<a
+            class="notification-link"
+            href="#"
+            >Get your Great</a
+          >
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero-img-box">
+          <picture>
+            <source
+              media="(max-width: 36.5em)"
+              srcset="
+                https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/82cb5808-b814-4188-888d-26627d657652/nike-just-do-it.png
+              "
+            />
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/631b4545-a04b-41cb-acbf-1e27c3219154/nike-just-do-it.png"
+              alt="hero-img"
+              class="hero-img"
+            />
+          </picture>
+        </div>
+        <div class="hero-info">
+          <h1 class="hero-title">Gifts that move you</h1>
+          <p class="hero-slogan">This year's gift. Next year's greatness.</p>
+          <div class="hero-btns">
+            <button class="btn btn-dark">Shop</button>
+            <button class="btn btn-dark">Explore</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel">
+        <div class="carousel-controls">
+          <button class="carousel-control carousel-control-left disabled">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="carousel-control carousel-control-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="carousel-items section-2">
+          <div class="carousel-img-box section-2-img-box">
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_809,c_limit/53f11b90-43a9-46d6-86b7-ebf77f13f73f/nike-just-do-it.png"
+              alt="carousel img"
+              class="carousel-img section-2-img"
+            />
+            <span>For Her</span>
+          </div>
+          <div class="carousel-img-box section-2-img-box">
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_593,c_limit/c63082dd-5e3f-456a-8c0c-40720c46c2dd/nike-just-do-it.png"
+              alt="carousel img"
+              class="carousel-img section-2-img"
+            />
+            <span>For Him</span>
+          </div>
+          <div class="carousel-img-box section-2-img-box">
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_593,c_limit/74a27044-2e2c-4dc0-8a51-7343a8c63739/nike-just-do-it.png"
+              alt="carousel img"
+              class="carousel-img section-2-img"
+            />
+            <span>For Kids</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="latest section">
+        <h2 class="latest-title section-title">The Latest</h2>
+        <div class="section-img-box">
+          <picture>
+            <source
+              media="(max-width: 36.5em)"
+              srcset="
+                https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_752,c_limit/3fa125df-959d-4673-bfd6-ff11de343f0a/nike-just-do-it.jpg
+              "
+            />
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/e17ae72a-3158-428d-a211-10a1aa161117/nike-just-do-it.png"
+              alt="section-img"
+              class="hero-img"
+            />
+          </picture>
+        </div>
+
+        <div class="section-info-box">
+          <p class="section-subheading">Air Max Pulse Roam</p>
+          <h3 class="section-heading">Roam Endlessly</h3>
+          <p class="section-body">
+            The Air Max Pulse Roam has arrived, leveled up to deal with anything
+            the inner city can <br />
+            throw at it. Designed to be with you anywhere at anytime, from
+            morning till night.
+          </p>
+          <button class="btn btn-dark">Shop Now</button>
+        </div>
+      </section>
+
+      <section class="featured section">
+        <h2 class="section-title">Featured</h2>
+
+        <div class="section-grid-2-col">
+          <div class="col col-1">
+            <div>
+              <p>Own the Floor</p>
+              <h3>
+                Phoenix Fleece Styles <br />
+                Fit for the Spotlight
+              </h3>
+              <button class="btn btn-light">Shop Now</button>
+            </div>
+          </div>
+          <div class="col col-2">
+            <div>
+              <p>Nike Dunk</p>
+              <h3>Unapologetically Original</h3>
+              <button class="btn btn-light">Shop</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="just-in section">
+        <h2 class="just-in-title section-title">Just In</h2>
+        <div class="section-img-box">
+          <picture>
+            <source
+              media="(max-width: 36.5em)"
+              srcset="
+                https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/6c619678-be4e-4ea2-8b11-53bd80403244/image.jpg
+              "
+            />
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/a6028f4f-7859-4a49-9fcd-91614e844bb2/nike-just-do-it.jpg"
+              alt="section-img"
+              class="hero-img"
+            />
+          </picture>
+        </div>
+
+        <div class="section-info-box">
+          <p class="section-subheading">‘Mud, Sweat & Tears’</p>
+          <h3 class="section-heading">Zion 3</h3>
+          <p class="section-body">
+            Zion set his sights on the sky and put in the work to get there.
+            <br />
+            Mud, Sweat & Tears were his fuel to take flight—now make them your
+            own.
+          </p>
+          <button class="btn btn-dark">Shop</button>
+        </div>
+      </section>
+
+      <section class="trending-now section">
+        <div class="section-title-box">
+          <h2 class="section-title">Trending Now</h2>
+          <div class="carousel-controls">
+            <span>Shop</span>
+            <button class="carousel-control carousel-control-left disabled">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="carousel-control carousel-control-right">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-items">
+          <!-- item 1 -->
+          <div class="carousel-item">
+            <div class="carousel-img-box">
+              <div class="carousel-img trending-now-img-box">
+                <img
+                  src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_593,c_limit/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-shoes-WrLlWX.png"
+                  alt="shoe img"
+                  class="trending-now-img"
+                />
+              </div>
+            </div>
+            <div class="carousel-item-info">
+              <span class="carousel-item-name">Nike Air Force 1 '07</span>
+              <span class="carousel-item-gender">Men's Shoes</span>
+              <span class="carousel-item-price">MRP: ₹7 495</span>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="carousel-item">
+            <div class="carousel-img-box">
+              <div class="carousel-img">
+                <img
+                  src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_593,c_limit/235ac5d0-14fa-4372-a821-a4c0d95e5426/court-vision-low-next-nature-shoes-p3CnbT.png"
+                  alt="shoe img"
+                />
+              </div>
+            </div>
+            <div class="carousel-item-info">
+              <span class="carousel-item-name"
+                >Nike Court Vision Low Next Nature</span
+              >
+              <span class="carousel-item-gender">Women's Shoes</span>
+              <span class="carousel-item-price">MRP: ₹4 995</span>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="carousel-item">
+            <div class="carousel-img-box">
+              <div class="carousel-img">
+                <img
+                  src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_593,c_limit/922139e1-3221-4e96-a9f9-3fbb67926e17/nikecourt-legacy-shoes-PKg8wX.png"
+                  alt="shoe img"
+                />
+              </div>
+            </div>
+            <div class="carousel-item-info">
+              <span class="carousel-item-name">NikeCourt Legacy</span>
+              <span class="carousel-item-gender">Men's Shoes</span>
+              <span class="carousel-item-price">MRP: ₹5 695</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dont-miss section">
+        <h2 class="just-in-title section-title">Don't Miss</h2>
+        <div class="section-img-box">
+          <picture>
+            <source
+              media="(max-width: 36.5em)"
+              srcset="
+                https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_435,c_limit/eea368a3-2371-40a0-bc2c-56c3948f3385/nike-just-do-it.jpg
+              "
+            />
+            <img
+              src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/be7dd737-0df9-4d81-89e7-dccca84634a2/nike-just-do-it.jpg"
+              alt="section-img"
+              class="hero-img"
+            />
+          </picture>
+        </div>
+
+        <div class="section-info-box dont-miss-info-box">
+          <h3 class="section-heading">Unlimited Pant</h3>
+          <p class="section-body">Stretch and flex for all your workouts.</p>
+          <button class="btn btn-dark">Shop</button>
+        </div>
+      </section>
+
+      <section class="iconic">
+        <h2 class="iconic-title section-title">Always Iconic</h2>
+        <div class="carousel iconic-carousel">
+          <div class="carousel-items iconic-carousel-items">
+            <div class="carousel-item">
+              <div class="carousel-img-box iconic-img-box">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1808,c_limit/db148950-20f5-4801-b53d-771c55c89373/nike-just-do-it.jpg"
+                  alt="shoe img"
+                  class="carousel-img iconic-img"
+                />
+              </div>
+              <div class="carousel-info-box">
+                <!-- <div class="carousel-item-caption">Air Jordan 1</div> -->
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-img-box iconic-img-box">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1808,c_limit/64438d05-3165-4922-a77e-e3f6e08496bc/nike-just-do-it.jpg"
+                  alt="shoe img"
+                  class="carousel-img iconic-img"
+                />
+              </div>
+              <div class="carousel-info-box">
+                <!-- <div class="carousel-item-caption">Air Jordan 1</div> -->
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-img-box iconic-img-box current">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1808,c_limit/91f839aa-b110-4acc-879a-2cea80bc580c/nike-just-do-it.jpg"
+                  alt="shoe img"
+                  class="carousel-img iconic-img"
+                />
+              </div>
+              <div class="carousel-info-box">
+                <div class="carousel-item-caption">Air Jordan 1</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-img-box iconic-img-box">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1808,c_limit/2c316733-7080-4fa9-84f9-c804fac9d053/nike-just-do-it.jpg"
+                  alt="shoe img"
+                  class="carousel-img iconic-img"
+                />
+              </div>
+              <div class="carousel-info-box">
+                <!-- <div class="carousel-item-caption">Air Jordan 1</div> -->
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-img-box iconic-img-box">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1808,c_limit/64438d05-3165-4922-a77e-e3f6e08496bc/nike-just-do-it.jpg"
+                  alt="shoe img"
+                  class="carousel-img iconic-img"
+                />
+              </div>
+              <div class="carousel-info-box">
+                <!-- <div class="carousel-item-caption">Air Jordan 1</div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls iconic-carousel-controls">
+            <button
+              class="carousel-control iconic-carousel-control carousel-control-left"
+            >
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button
+              class="carousel-control iconic-carousel-control carousel-control-right"
+            >
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sport section">
+        <div class="section-title-box">
+          <h2 class="section-title">Shop by Sport</h2>
+          <div class="carousel-controls">
+            <span>Shop</span>
+            <button class="carousel-control carousel-control-left disabled">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="carousel-control carousel-control-right">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-items">
+          <!-- item 1 -->
+          <div class="carousel-item">
+            <div class="carousel-img-box">
+              <div class="carousel-img">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_593,c_limit/a51d84b2-282a-44d6-957d-aa57473ed73d/nike-just-do-it.jpg"
+                  alt="shoe img"
+                />
+              </div>
+            </div>
+            <div class="carousel-item-info">
+              <span class="carousel-item-name">Nike Basketball</span>
+              <span class="carousel-item-slogan sport-carousel-item-slogan"
+                >Styles made for your game</span
+              >
+              <button class="btn-underline">Shop</button>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="carousel-item">
+            <div class="carousel-img-box">
+              <div class="carousel-img">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_593,c_limit/0376dfa6-a2d7-4867-bd13-4b8e465705c1/nike-just-do-it.jpg"
+                  alt="shoe img"
+                />
+              </div>
+            </div>
+            <div class="carousel-item-info">
+              <span class="carousel-item-name">Nike Trail</span>
+              <span class="carousel-item-slogan sport-carousel-item-slogan"
+                >Gear that leads to wild places.</span
+              >
+              <button class="btn-underline">Shop</button>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="carousel-item">
+            <div class="carousel-img-box">
+              <div class="carousel-img">
+                <img
+                  src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_593,c_limit/3df1f8e5-5ece-4e81-87e6-f8a30c8a3fab/nike-just-do-it.jpg"
+                  alt="shoe img"
+                />
+              </div>
+            </div>
+            <div class="carousel-item-info sport-carousel-item-info">
+              <span class="carousel-item-name">Nike Basketball</span>
+              <span class="carousel-item-slogan sport-carousel-item-slogan"
+                >Styles made for your game</span
+              >
+              <button class="btn-underline">Shop</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="essentials section">
+        <h2 class="section-title">Featured</h2>
+
+        <div class="essentials-items">
+          <!-- item 1 -->
+          <div class="essentials-item">
+            <div class="essentials-img-box">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_599,c_limit/5e9d47e4-d0af-4cfe-a40a-31729d9d2ce4/nike-just-do-it.png"
+                alt="men img"
+              />
+            </div>
+            <button class="btn btn-light">Men's</button>
+          </div>
+
+          <!-- item 2 -->
+          <div class="essentials-item">
+            <div class="essentials-img-box">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_599,c_limit/963a54ad-6b91-4efe-8927-217656eb5240/nike-just-do-it.png"
+                alt="women img"
+              />
+            </div>
+            <button class="btn btn-light">Women's</button>
+          </div>
+
+          <!-- item 3 -->
+          <div class="essentials-item">
+            <div class="essentials-img-box">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_599,c_limit/e11e868d-e199-40fa-828c-a4e19c9b6943/nike-just-do-it.png"
+                alt="kid img"
+              />
+            </div>
+            <button class="btn btn-light">Kids's</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="filter-table">
+        <div class="table">
+          <ul class="filter-list column-1">
+            <li class="column-heading">Icons</li>
+            <li class="filter-item">Air Force 1</li>
+            <li class="filter-item">Huarache</li>
+            <li class="filter-item">Air Max 90</li>
+            <li class="filter-item">Air Max 95</li>
+            <li class="filter-item">Air Max 97</li>
+            <li class="filter-item">Air Max 270</li>
+            <li class="filter-item">Air Max 720</li>
+            <li class="filter-item">All Air Max</li>
+            <li class="filter-item">Vapormax</li>
+          </ul>
+          <ul class="filter-list column-2">
+            <li class="column-heading">Shoes</li>
+            <li class="filter-item">All Shoes</li>
+            <li class="filter-item">Custom Shoes</li>
+            <li class="filter-item">Jordan Shoes</li>
+            <li class="filter-item">Running Shoes</li>
+            <li class="filter-item">Basketball Shoes</li>
+            <li class="filter-item">Football Shoes</li>
+            <li class="filter-item">Gym & Training Shoes</li>
+            <li class="filter-item">Lifestyle Shoes</li>
+          </ul>
+          <ul class="filter-list column-3">
+            <li class="column-heading">Clothing</li>
+            <li class="filter-item">All Clothing</li>
+            <li class="filter-item">Modest Wear</li>
+            <li class="filter-item">Hoodies & Pullovers</li>
+            <li class="filter-item">Shirts & Tops</li>
+            <li class="filter-item">Jackets</li>
+            <li class="filter-item">Compression & Nike Pro</li>
+            <li class="filter-item">Trousers & Leggings</li>
+            <li class="filter-item">Shorts</li>
+          </ul>
+          <ul class="filter-list column-4">
+            <li class="column-heading">Kids'</li>
+            <li class="filter-item">Infant & Toddler Shoes</li>
+            <li class="filter-item">Kids' Shoes</li>
+            <li class="filter-item">Kids' Jordan Shoes</li>
+            <li class="filter-item">Kids' Basketball Shoes</li>
+            <li class="filter-item">Kids' Running Shoes</li>
+            <li class="filter-item">Kids' Clothing</li>
+            <li class="filter-item">Kids' Backpacks</li>
+            <li class="filter-item">Kids' Socks</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-top">
+          <div class="footer-table">
+            <ul class="footer-list">
+              <li class="uppercase">Find a Store</li>
+              <li class="uppercase">Become a Member</li>
+              <li>Send us Feedback</li>
+            </ul>
+
+            <ul class="footer-list">
+              <li class="uppercase">Get Help</li>
+              <li class="footer-link">Order Status</li>
+              <li class="footer-link">Deliver</li>
+              <li class="footer-link">Returns</li>
+              <li class="footer-link">Payment Options</li>
+              <li class="footer-link">Contact Us On Nike.com Inquiries</li>
+              <li class="footer-link">Contact Us On All Other Inquiries</li>
+            </ul>
+
+            <ul class="footer-list">
+              <li class="uppercase">About Nike</li>
+              <li class="footer-link">News</li>
+              <li class="footer-link">Careers</li>
+              <li class="footer-link">Investors</li>
+              <li class="footer-link">Sustainability</li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <ion-icon class="footer-social" name="logo-twitter"></ion-icon>
+            <ion-icon class="footer-social" name="logo-facebook"></ion-icon>
+            <ion-icon class="footer-social" name="logo-youtube"></ion-icon>
+            <ion-icon class="footer-social" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <span class="location"
+              ><ion-icon name="location-outline"></ion-icon> India</span
+            >
+            <p class="copyright">© 2023 Nike, Inc. All Rights Reserved</p>
+          </div>
+          <div class="footer-tnc">
+            <ul class="tnc-list">
+              <li class="footer-link">Guides</li>
+              <li class="footer-link">Terms of Sale</li>
+              <li class="footer-link">Terms of Use</li>
+              <li class="footer-link">Nike Privacy Policy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

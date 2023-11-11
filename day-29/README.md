@@ -1,0 +1,3 @@
+- Objects
+  - accessing object values using their keys
+  - dynamically adding new key/value pair in objects
