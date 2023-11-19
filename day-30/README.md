@@ -1,0 +1,9 @@
+- Static Registration/Login Form
+- Workflow of a fullstack application
+- Local Storage
+- `onclick()`
+- `onsubmit()`
+- `event.preventDefault()`
+- `document.getElementById()`
+- `JSON.stringify()`
+- `JSON.parse()`
