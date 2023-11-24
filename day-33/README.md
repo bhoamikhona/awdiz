@@ -1,0 +1,7 @@
+- Pre-defined functions for array
+  - `map()` - returns an array with updated values
+  - `forEach()` - returns separate values
+  - `reduce()` - returns a single value
+  - `filter()` - returns an array of values but, filtered
+- `setTimeout()`
+- `setInterval()`
