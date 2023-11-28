@@ -1,0 +1,5 @@
+- Nested Functions
+- Closure - inner function can access outer function's scope
+- Event Loop
+- Promise, resolve (success), reject (fail), then, catch
+- async, await, try, catch
