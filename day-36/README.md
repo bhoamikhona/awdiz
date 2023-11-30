@@ -1,0 +1,8 @@
+- Theoretical lecture, topics covered:
+  - difference between frameworks and libraries
+  - React Overview
+    - React file flow
+    - Node Packages
+    - Package.json
+    - Package-lock.json
+    - gitignore
