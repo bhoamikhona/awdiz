@@ -1,0 +1,13 @@
+- jsx
+- babel
+- webpack module bundler
+- why react?
+  - virtual DOM
+  - ease of use
+  - seamless update
+  - reusable components
+  - developer tools
+  - opensource
+- React Router
+  - react-router-dom
+- Assignment use React Router for login and register pages
