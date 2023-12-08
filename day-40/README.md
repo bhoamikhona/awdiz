@@ -1,0 +1,3 @@
+- `useState`
+- `useEffect`
+  - no dependency - executes when browser is loaded or whenever any state changes
