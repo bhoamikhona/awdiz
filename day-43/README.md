@@ -1,0 +1,4 @@
+- Adding normal JS logic to components
+- Splitting a component into multiple components
+- Children prop - a special prop that allows you to pass child component to a parent component
+- Forms and User Inputs
