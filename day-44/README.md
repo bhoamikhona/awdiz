@@ -1,0 +1,3 @@
+- try and catch
+- axios
+- async/await
