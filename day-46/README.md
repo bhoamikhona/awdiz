@@ -1,0 +1,5 @@
+- child to parent
+- working with API
+  - making http request
+  - we use axios to make http requests
+- [Fake Store API](https://fakestoreapi.com/)
