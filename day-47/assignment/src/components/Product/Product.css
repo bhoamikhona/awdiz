@@ -1,0 +1,32 @@
+.card.single-product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+
+  width: 50%;
+  margin: 0 auto;
+}
+
+.card-img-box {
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-info-box {
+  padding: 2rem;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
