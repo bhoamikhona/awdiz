@@ -1,0 +1,4 @@
+- difference between useEffect and useMemo
+  - useEffect does not return a value
+  - useMemo does return a value
+- useReducer hook
