@@ -1,0 +1,14 @@
+- OS module
+  - `os.platform()`
+  - `os.release()`
+  - `os.hostname()`
+  - `os.cpus()`
+  - `os.totalmem()`
+  - `os.freemem()`
+  - `os.networkInterfaces()`
+  - `os.constants`
+- Event Emitter
+- Event Propagation
+- Bubbling
+- Overview of how client-server works
+- What is NPM
