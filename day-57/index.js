@@ -1,4 +1,3 @@
-// Express
 import fs from "fs";
 
 // fs.readFile("test.txt", "utf-8", (err, data) => {
