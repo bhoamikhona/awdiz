@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 14 - Local Storage</title>
+  </head>
+  <body>
+    <h1>Day 14</h1>
+    <script>
+      // to store data in local storage - localStorage.setItem(key,value)
+      localStorage.setItem("name", "bhoami");
+      localStorage.setItem("list", "[1,2,3,4]");
+
+      // to retrieve data from local storage - localStorage.getItem(key)
+      const dataFromLS = localStorage.getItem("name");
+      console.log(dataFromLS);
+
+      // to delete specific key value from local storage - localStorage.removeItem(key)
+      localStorage.removeItem("list");
+      localStorage.removeItem("name");
+
+      // to delete all data from local storage
+      localStorage.clear();
+
+      // JS Object vs. JSON
+      // NOTE: JSON can only use double quotes, it does not work with single quotes or backticks
+      const obj = { name: "bhoami" }; // javascript object
+      const json = { name: "bhoami" }; // json
+
+      // to convert JS object to JSON, use JSON.stringify()
+      const myData = { name: "Bhoami" };
+      const jsonData = JSON.stringify(myData);
+      console.log("jsonData", jsonData); // jsonData {"name":"Bhoami"}
+
+      // to convert JSON to JS Object, use JSON.parse()
+      const jsData = JSON.parse(jsonData);
+      console.log("jsData", jsData); // {name: 'Bhoami'}
+
+      const data = {
+        name: "bhoami",
+        email: "bhoami@email.com",
+        password: "pass@123",
+      };
+      localStorage.setItem("data", JSON.stringify(data));
+      const myData2 = JSON.parse(localStorage.getItem("data"));
+      console.log(myData?.name);
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@ export default function AllProducts() {
 
   useEffect(() => {
     axios
-      .get("/all-products")
+      .get("http://localhost:8000/all-products/")
       .then((products) => setProducts(products.data))
       .catch((err) => console.log(err));
   }, []);

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h1>Register:</h1>
+    <form onsubmit="register(event)">
+      <div class="input-control">
+        <label for="name">Name:</label>
+        <input required id="name" type="text" autocomplete="off" />
+      </div>
+      <div class="input-control">
+        <label for="email">Email:</label>
+        <input required id="email" type="email" autocomplete="off" />
+      </div>
+      <div class="input-control">
+        <label for="password">Password:</label>
+        <input required id="password" type="password" autocomplete="off" />
+      </div>
+      <div class="input-control">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input id="confirmPassword" type="password" autocomplete="off" />
+      </div>
+      <div class="input-control">
+        <input required type="submit" value="Register" />
+      </div>
+    </form>
+  </body>
+  <script>
+    const checkIsEmailExist = function (users, email) {
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email === email) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    function register(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      console.log(name, email, password, confirmPassword);
+
+      if (name && email && password && confirmPassword) {
+        if (password === confirmPassword) {
+          const userData = { name: name, email, password };
+
+          const isUserListExist = JSON.parse(localStorage.getItem("users"));
+
+          if (isUserListExist?.length) {
+            const emailExist = checkIsEmailExist(isUserListExist, email);
+            if (emailExist) {
+              return alert("Email alrady in use, try another.");
+            }
+            isUserListExist.push(userData);
+            localStorage.setItem("users", JSON.stringify(isUserListExist));
+          } else {
+            localStorage.setItem("users", JSON.stringify([userData]));
+          }
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          document.getElementById("confirmPassword").value = "";
+          alert("Registeration Successful.");
+          return (window.location.href = "./login.html");
+        } else {
+          alert("Password and Confirm Password do not match.");
+        }
+      } else {
+        return alert("All fields are required.");
+      }
+    }
+  </script>
+</html>

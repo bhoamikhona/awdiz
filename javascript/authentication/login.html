@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login:</h1>
+    <form onsubmit="login(event)">
+      <div class="input-control">
+        <label for="email">Email:</label>
+        <input required id="email" type="email" autocomplete="off" />
+      </div>
+      <div class="input-control">
+        <label for="password">Password:</label>
+        <input required id="password" type="password" autocomplete="off" />
+      </div>
+      <div class="input-control">
+        <input required type="submit" value="Login" />
+      </div>
+    </form>
+
+    <script>
+      const login = function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email && password) {
+          const usersList = JSON.parse(localStorage.getItem("users"));
+          if (usersList) {
+            for (let i = 0; i < usersList.length; i++) {
+              if (
+                usersList[i].email === email &&
+                usersList[i].password === password
+              ) {
+                localStorage.setItem(
+                  "currentUser",
+                  JSON.stringify(usersList[i])
+                );
+                document.getElementById("email").value = "";
+                document.getElementById("password").value = "";
+                alert("Login Successful.");
+                return (window.location.href = "./index.html");
+              }
+            }
+
+            return alert("Login Failed");
+          } else {
+            return alert("You are not registered.");
+          }
+        } else {
+          return alert("All fields are required.");
+        }
+      };
+    </script>
+  </body>
+</html>
