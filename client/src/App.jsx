@@ -14,6 +14,7 @@ import UseReducer from "./components/09-03/UseReducer.jsx";
 import PropsDrilling from "./components/09-03/PropsDrilling.jsx";
 import AllProducts from "./components/10-03/AllProducts.jsx";
 import FakeStoreAllProducts from "./components/10-03/FakeStoreAllProducts.jsx";
+import Todo from "./components/15-03/Todo.jsx";
 
 function App() {
   const [students, setStudents] = useState(["a", "b", "c", "d"]);
@@ -73,6 +74,7 @@ function App() {
           element={<AllProducts products={products} />}
         />
         <Route path="/fake-all-products" element={<FakeStoreAllProducts />} />
+        <Route path="/todo" element={<Todo />} />
       </Routes>
     </div>
   );
