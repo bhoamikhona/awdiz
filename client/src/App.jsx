@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Login from "./components/06-03/Login.jsx";
@@ -15,6 +15,11 @@ import PropsDrilling from "./components/09-03/PropsDrilling.jsx";
 import AllProducts from "./components/10-03/AllProducts.jsx";
 import FakeStoreAllProducts from "./components/10-03/FakeStoreAllProducts.jsx";
 import Todo from "./components/15-03/Todo.jsx";
+import Theme from "./components/16-03/Theme.jsx";
+import Navbar from "./components/global/Navbar.jsx";
+import PageNotFound from "./components/16-03/PageNotFound.jsx";
+import FakeStoreSingleProduct from "./components/16-03/FakeStoreSingleProduct.jsx";
+import Render from "./components/16-03/Render.jsx";
 
 function App() {
   const [students, setStudents] = useState(["a", "b", "c", "d"]);
@@ -54,7 +59,9 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Routes>
+        <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -74,7 +81,13 @@ function App() {
           element={<AllProducts products={products} />}
         />
         <Route path="/fake-all-products" element={<FakeStoreAllProducts />} />
+        <Route
+          path="/fake-single-product/:id"
+          element={<FakeStoreSingleProduct />}
+        />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/theme" element={<Theme />} />
+        <Route path="/render" element={<Render />} />
       </Routes>
     </div>
   );

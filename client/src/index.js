@@ -7,42 +7,45 @@ import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import ProviderCounterContext from "./components/context/CounterContext.jsx";
 import AuthContextComponent from "./components/context/AuthContext.jsx";
+import ThemeContext from "./components/context/ThemeContext.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AuthContextComponent>
-        <ProviderCounterContext>
-          <Toaster
-            position="bottom-center"
-            reverseOrder={false}
-            gutter={8}
-            containerClassName=""
-            containerStyle={{}}
-            toastOptions={{
-              // Define default options
-              className: "",
-              duration: 5000,
-              style: {
-                background: "#363636",
-                color: "#fff",
-              },
-
-              // Default options for specific types
-              success: {
-                duration: 3000,
-                theme: {
-                  primary: "green",
-                  secondary: "black",
+    <ThemeContext>
+      <BrowserRouter>
+        <AuthContextComponent>
+          <ProviderCounterContext>
+            <Toaster
+              position="bottom-center"
+              reverseOrder={false}
+              gutter={8}
+              containerClassName=""
+              containerStyle={{}}
+              toastOptions={{
+                // Define default options
+                className: "",
+                duration: 5000,
+                style: {
+                  background: "#363636",
+                  color: "#fff",
                 },
-              },
-            }}
-          />
-          <App />
-        </ProviderCounterContext>
-      </AuthContextComponent>
-    </BrowserRouter>
+
+                // Default options for specific types
+                success: {
+                  duration: 3000,
+                  theme: {
+                    primary: "green",
+                    secondary: "black",
+                  },
+                },
+              }}
+            />
+            <App />
+          </ProviderCounterContext>
+        </AuthContextComponent>
+      </BrowserRouter>
+    </ThemeContext>
   </React.StrictMode>
 );
 

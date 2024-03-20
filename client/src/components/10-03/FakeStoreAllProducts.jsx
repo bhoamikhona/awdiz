@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AllProducts.css";
+import { useNavigate } from "react-router-dom";
 
 export default function FakeStoreAllProducts() {
   const [allProducts, setAllProducts] = useState([]);
   console.log(allProducts);
+
+  const router = useNavigate();
 
   const getProducts = async function () {
     try {
@@ -17,6 +20,11 @@ export default function FakeStoreAllProducts() {
     }
   };
 
+  async function redirect(id) {
+    // alert(id);
+    router(`/fake-single-product/${id}`);
+  }
+
   useEffect(() => {
     getProducts();
   }, []);
@@ -25,8 +33,8 @@ export default function FakeStoreAllProducts() {
       <h1>Fake Store All Products</h1>
       {allProducts?.length ? (
         <div className="products-container">
-          {allProducts.map(({ title, image }) => (
-            <div className="product-card">
+          {allProducts.map(({ title, image, id }) => (
+            <div onClick={() => redirect(id)} className="product-card">
               <div className="product-img-container">
                 <img src={image} alt={title} className="product-img" />
               </div>
