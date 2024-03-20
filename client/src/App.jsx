@@ -20,6 +20,7 @@ import Navbar from "./components/global/Navbar.jsx";
 import PageNotFound from "./components/16-03/PageNotFound.jsx";
 import FakeStoreSingleProduct from "./components/16-03/FakeStoreSingleProduct.jsx";
 import Render from "./components/16-03/Render.jsx";
+import CurrencyConverter from "./components/17-03/CurrencyConverter.jsx";
 
 function App() {
   const [students, setStudents] = useState(["a", "b", "c", "d"]);
@@ -88,6 +89,7 @@ function App() {
         <Route path="/todo" element={<Todo />} />
         <Route path="/theme" element={<Theme />} />
         <Route path="/render" element={<Render />} />
+        <Route path="/converter" element={<CurrencyConverter />} />
       </Routes>
     </div>
   );

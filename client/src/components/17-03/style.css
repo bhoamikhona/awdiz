@@ -1,0 +1,110 @@
+.cc-app__container {
+  min-height: 90vh;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cc-app__card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  padding: 30px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+}
+
+.cc-app__heading {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.cc-app__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc-app__input-control {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.cc-app__input-label {
+  display: none;
+}
+
+.cc-app__input {
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.cc-app__choices {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cc-app__from-container,
+.cc-app__to-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+}
+
+.cc-app__select {
+  background-color: #12b886;
+  border-radius: 5px;
+  color: #eee;
+  border: none;
+  padding: 8px;
+  width: 150px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.cc-app__option {
+  background-color: white;
+  color: #333;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cc-app__footer {
+  width: 100%;
+}
+
+.cc-app__btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #12b886;
+  border-radius: 5px;
+  color: #eee;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.cc-app__result {
+  color: #087f5b;
+  font-size: 20px;
+}
