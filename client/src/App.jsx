@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Login from "./components/06-03/Login.jsx";
@@ -22,6 +22,7 @@ import FakeStoreSingleProduct from "./components/16-03/FakeStoreSingleProduct.js
 import Render from "./components/16-03/Render.jsx";
 import CurrencyConverter from "./components/17-03/CurrencyConverter.jsx";
 import CounterRedux from "./components/20-03/CounterRedux.jsx";
+import UseMemo from "./components/22-03/UseMemo.jsx";
 
 function App() {
   const [students, setStudents] = useState(["a", "b", "c", "d"]);
@@ -92,6 +93,7 @@ function App() {
         <Route path="/render" element={<Render />} />
         <Route path="/converter" element={<CurrencyConverter />} />
         <Route path="/counter-redux" element={<CounterRedux />} />
+        <Route path="/use-memo" element={<UseMemo />} />
       </Routes>
     </div>
   );
