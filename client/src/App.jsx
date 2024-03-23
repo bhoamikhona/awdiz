@@ -24,6 +24,7 @@ import CurrencyConverter from "./components/17-03/CurrencyConverter.jsx";
 import CounterRedux from "./components/20-03/CounterRedux.jsx";
 import UseMemo from "./components/22-03/UseMemo.jsx";
 import UseCallback from "./components/23-03/UseCallback.jsx";
+import ThemeRedux from "./components/23-03/ThemeRedux.jsx";
 
 function App() {
   const [students, setStudents] = useState(["a", "b", "c", "d"]);
@@ -96,6 +97,7 @@ function App() {
         <Route path="/counter-redux" element={<CounterRedux />} />
         <Route path="/use-memo" element={<UseMemo />} />
         <Route path="/use-callback" element={<UseCallback />} />
+        <Route path="/theme-redux" element={<ThemeRedux />} />
       </Routes>
     </div>
   );
