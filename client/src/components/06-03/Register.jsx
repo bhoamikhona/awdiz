@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function Register() {
   const router = useNavigate();
@@ -28,15 +29,18 @@ export default function Register() {
       // await calling backend -> one server to another server request -> backend validation -> data to store mongodb
 
       try {
-        // const response = await axios.post("http://localhost:8000/login", { userData });
-
+        const response = await axios.post(
+          "http://localhost:8000/api/v1/auth/register",
+          userData
+        );
+        console.log(response);
         // return res
         //   .status(201)
         //   .json({ success: true, message: "Registration Completed." });
 
-        const response = {
-          data: { success: true, message: "Registration Completed." },
-        };
+        // const response = {
+        //   data: { success: true, message: "Registration Completed." },
+        // };
 
         if (response.data.success) {
           toast.success(response.data.message);
@@ -48,6 +52,8 @@ export default function Register() {
           });
 
           router("/login");
+        } else {
+          console.log(response.data.message);
         }
       } catch (error) {
         toast.error(error.response.data.message);
@@ -114,7 +120,8 @@ export default function Register() {
           />
         </div>
         <div className="input-control">
-          <input type="submit" value="Register" />
+          {/* <input type="submit" value="Register" /> */}
+          <button type="submit">Register</button>
         </div>
       </form>
     </div>

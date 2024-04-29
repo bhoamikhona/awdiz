@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import ProviderCounterContext from "./components/context/CounterContext.jsx";
-import AuthContextComponent from "./components/context/AuthContext.jsx";
+import { AuthContextComponent } from "./components/context/AuthContext.jsx";
 import ThemeContext from "./components/context/ThemeContext.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/Store.js";
@@ -19,7 +19,7 @@ root.render(
         <AuthContextComponent>
           <ProviderCounterContext>
             <Toaster
-              position="bottom-center"
+              position="top-center"
               reverseOrder={false}
               gutter={8}
               containerClassName=""

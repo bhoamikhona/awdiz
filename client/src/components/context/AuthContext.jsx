@@ -1,4 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export const AuthContext = createContext();
 
@@ -15,7 +17,7 @@ function Reducer(state, action) {
 
 const InitialState = { user: null };
 
-const AuthContextComponent = ({ children }) => {
+export const AuthContextComponent = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, InitialState);
 
   function LOGIN(data) {
@@ -26,29 +28,32 @@ const AuthContextComponent = ({ children }) => {
     dispatch({ type: "LOGOUT" });
   }
 
-  async function getUserDataa(token) {
+  async function getUserData() {
     try {
-      // const response = await axios.post('/validate-token', {token})
-      const response = {
-        data: {
-          success: true,
-          userData: { name: "Bhoami", email: "bhoami@email.com" },
-        },
-      };
+      const response = await axios.get(
+        "http://localhost:8000/api/v1/auth/validate-token",
+        {
+          withCredentials: true,
+        }
+      );
+
       if (response.data.success) {
-        LOGIN(response.data.userData);
+        LOGIN(response.data.user);
+      } else {
+        // toast.error(response);
+        console.log(response);
       }
     } catch (error) {
       console.log(error);
+      if (error.data.error.message === "jwt expired") {
+        // toast.error("Session expired");
+        console.log("session expired");
+      }
     }
   }
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem("token"));
-
-    if (token) {
-      getUserDataa(token);
-    }
+    getUserData();
   }, []);
 
   return (
@@ -57,5 +62,3 @@ const AuthContextComponent = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export default AuthContextComponent;
