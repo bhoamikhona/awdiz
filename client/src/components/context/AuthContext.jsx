@@ -1,6 +1,5 @@
 import { createContext, useEffect, useReducer } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
 
 export const AuthContext = createContext();
 
@@ -41,14 +40,10 @@ export const AuthContextComponent = ({ children }) => {
         LOGIN(response.data.user);
       } else {
         // toast.error(response);
-        console.log(response);
+        console.log("response:", response);
       }
     } catch (error) {
-      console.log(error);
-      if (error.data.error.message === "jwt expired") {
-        // toast.error("Session expired");
-        console.log("session expired");
-      }
+      console.log("error:", error);
     }
   }
 

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 50rem;
+  padding: 4rem;
+  border-radius: 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+input {
+  margin-bottom: 2rem;
+  height: 3rem;
+  border: none;
+  padding-left: 2rem;
+  color: white;
+  background-color: transparent;
+  border-bottom: 1px solid #999;
+  outline: none;
+}
+
+input::placeholder {
+  color: #222;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+button {
+  height: 3rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #222;
+  padding: 2rem;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-btn {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  color: white;
+}
+
+.home-btn:hover {
+  background-color: #444;
+}
+
+.home-btn > .link {
+  font: inherit;
+  color: white;
+  text-decoration: none;
+}

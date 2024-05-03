@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { MyCounterContext } from "./context/CounterContext.jsx";
 import { AuthContext } from "./context/AuthContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const { counter, Increment } = useContext(MyCounterContext);
   const { state } = useContext(AuthContext);
   console.log(state);
+
+  const navigate = useNavigate();
 
   return (
     <div>

@@ -119,16 +119,6 @@ export const validateToken = async function (req, res) {
       return res.json({
         success: false,
         message: "Token is expired",
-        expired: true,
-      });
-    }
-
-    const currenTime = Math.floor(Date.now() / 1000); // Get current time in seconds
-    if (decodedData.exp < currenTime) {
-      return res.json({
-        success: false,
-        message: "Token is expired",
-        expired: true,
       });
     }
 
@@ -142,6 +132,14 @@ export const validateToken = async function (req, res) {
 
     return res.json({ success: true, user });
   } catch (error) {
+    if (error.name === "TokenExpiredError") {
+      return res.json({
+        success: false,
+        message: "Token is expired",
+        expired: true,
+      });
+    }
+
     console.log(error);
     return res.json({ error, success: false });
   }
