@@ -1,8 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { ProductSchema } from "./schemas/product.schema.js";
-import { ProductSchema2 } from "./schemas/product.schema.js";
+import { ProductSchema, ProductSchema2 } from "./schemas/product.schema.js";
+import UserSchema from "./schemas/user.schema.js";
+import bcrypt from "bcrypt";
 
 const app = express();
 dotenv.config();
@@ -10,60 +11,122 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.send("Working"));
 
-// app.post("/add-product", async function (req, res) {
-//   try {
-//     const { name, category, price, quantity, tags } = req.body;
+const hashPassword = function (password) {
+  return new Promise(function (resolve, reject) {
+    bcrypt.genSalt(12, function (err, salt) {
+      if (err) {
+        reject(err);
+      }
+      bcrypt.hash(password, salt, function (err, hash) {
+        if (err) {
+          reject(err);
+        }
+        resolve(hash);
+      });
+    });
+  });
+};
 
-//     if (!name || !category || !price || !quantity || !tags) {
-//       return res.json({ success: false, message: "All fields are required" });
-//     }
+app.post("/register", async function (req, res) {
+  try {
+    const { name, email, password, confirmPassword } = req.body;
 
-//     const newProduct = new ProductSchema({
-//       name: name,
-//       category: category,
-//       price: price,
-//       quantity: quantity,
-//       tags: tags,
-//     });
+    if (!name) return res.json({ success: false, message: "Name is required" });
 
-//     await newProduct.save();
+    if (!password || password.length < 6)
+      return res.json({
+        success: false,
+        message:
+          "Password is required and should be at least 6 characters long",
+      });
 
-//     return res.json({ sucess: true, message: "Product successfully stored." });
-//   } catch (error) {
-//     return res.json({ success: false, message: "Something went wrong", error });
-//   }
-// });
+    if (password !== confirmPassword)
+      return res.json({
+        success: false,
+        message: "Password and Confirm Password should match",
+      });
 
-// Modify the route to use ProductSchema2 for validation
+    const exist = await UserSchema.findOne({ email });
+
+    if (exist)
+      return res.json({
+        success: false,
+        message: "Email already exists, try another one",
+      });
+
+    const hashedPassword = await hashPassword(password);
+
+    const user = await UserSchema.create({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    return res.json({
+      success: true,
+      user,
+      message: "Registration successful",
+    });
+  } catch (error) {
+    console.log(error);
+    return res.json({ success: false, error, message: "Something went wrong" });
+  }
+});
+
 app.post("/add-product", async function (req, res) {
   try {
-    const { error, value } = ProductSchema2.validate(req.body);
+    const { name, category, price, quantity, tags, userId } = req.body;
 
-    if (error) {
-      return res
-        .status(400)
-        .json({ success: false, message: error.details[0].message });
+    if (!name || !category || !price || !quantity || !tags || !userId) {
+      return res.json({ success: false, message: "All fields are required" });
     }
 
-    const { name, category, price, quantity, tags } = value;
-
     const newProduct = new ProductSchema({
-      name,
-      category,
-      price,
-      quantity,
-      tags,
+      name: name,
+      category: category,
+      price: price,
+      quantity: quantity,
+      tags: tags,
+      user: userId,
     });
 
     await newProduct.save();
 
-    return res.json({ success: true, message: "Product successfully stored." });
+    return res.json({ sucess: true, message: "Product successfully stored." });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ success: false, message: "Something went wrong", error });
+    return res.json({ success: false, message: "Something went wrong", error });
   }
 });
+
+// app.post("/add-product", async function (req, res) {
+//   try {
+//     const { error, value } = ProductSchema2.validate(req.body);
+
+//     if (error) {
+//       return res
+//         .status(400)
+//         .json({ success: false, message: error.details[0].message });
+//     }
+
+//     const { name, category, price, quantity, tags } = value;
+
+//     const newProduct = new ProductSchema({
+//       name,
+//       category,
+//       price,
+//       quantity,
+//       tags,
+//     });
+
+//     await newProduct.save();
+
+//     return res.json({ success: true, message: "Product successfully stored." });
+//   } catch (error) {
+//     return res
+//       .status(500)
+//       .json({ success: false, message: "Something went wrong", error });
+//   }
+// });
 
 app.post("/get-product", async function (req, res) {
   try {
@@ -112,6 +175,19 @@ app.post("/unwind-projecting", async function (req, res) {
       message: "Something went wrong.",
       error,
     });
+  }
+});
+
+app.post("/get-products-by-user", async function (req, res) {
+  try {
+    const { userId } = req.body;
+    const products = await ProductSchema.find({ user: userId }).populate(
+      "user"
+    );
+    res.send(products);
+  } catch (error) {
+    console.log(error);
+    return res.json({ success: false, error });
   }
 });
 
