@@ -4,10 +4,20 @@ import dotenv from "dotenv";
 import { ProductSchema, ProductSchema2 } from "./schemas/product.schema.js";
 import UserSchema from "./schemas/user.schema.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import cors from "cors";
+import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
 app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 
 app.get("/", (req, res) => res.send("Working"));
 
@@ -25,6 +35,10 @@ const hashPassword = function (password) {
       });
     });
   });
+};
+
+const comparePassword = function (password, hashed) {
+  return bcrypt.compare(password, hashed);
 };
 
 app.post("/register", async function (req, res) {
@@ -73,11 +87,108 @@ app.post("/register", async function (req, res) {
   }
 });
 
+app.post("/login", async function (req, res) {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.json({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    // check if user exists
+    const user = await UserSchema.findOne({ email });
+
+    if (!user) {
+      return res.json({
+        success: false,
+        message: "No user found",
+      });
+    }
+
+    const match = await comparePassword(password, user.password);
+
+    if (match) {
+      const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+        expiresIn: "10000", // set expiration time to 10 seconds
+      });
+      console.log(token);
+      res.cookie("token", token);
+
+      return res.json({
+        success: true,
+        message: "Login Successful",
+        userData: user,
+      });
+    }
+    if (!match) {
+      res.json({
+        success: false,
+        message: "Incorrect Password",
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    res.json({
+      success: false,
+      message: "Something went wrong",
+      error,
+    });
+  }
+});
+
+app.get("/validate-token", async function (req, res) {
+  try {
+    const token = req.cookies.token;
+    console.log(token);
+
+    if (!token) {
+      return res.json({
+        success: false,
+        message: "Token not found",
+      });
+    }
+
+    const decodedData = await jwt.verify(token, process.env.JWT_SECRET);
+    console.log(decodedData);
+
+    if (!decodedData.id) {
+      return res.json({
+        success: false,
+        message: "Token is expired",
+      });
+    }
+
+    const user = await UserSchema.findById(decodedData.id);
+
+    console.log(user);
+
+    if (!user) {
+      return res.json({ success: false, message: "Token is not valid" });
+    }
+
+    return res.json({ success: true, user });
+  } catch (error) {
+    if (error.name === "TokenExpiredError") {
+      return res.json({
+        success: false,
+        message: "Token is expired",
+        expired: true,
+      });
+    }
+
+    console.log(error);
+    return res.json({ error, success: false });
+  }
+});
+
 app.post("/add-product", async function (req, res) {
   try {
-    const { name, category, price, quantity, tags, userId } = req.body;
+    const { name, category, price, quantity, tags, img, userId } = req.body;
 
-    if (!name || !category || !price || !quantity || !tags || !userId) {
+    if (!name || !category || !price || !quantity || !tags || !img || !userId) {
       return res.json({ success: false, message: "All fields are required" });
     }
 
@@ -87,12 +198,13 @@ app.post("/add-product", async function (req, res) {
       price: price,
       quantity: quantity,
       tags: tags,
+      img: img,
       user: userId,
     });
 
     await newProduct.save();
 
-    return res.json({ sucess: true, message: "Product successfully stored." });
+    return res.json({ success: true, message: "Product successfully stored." });
   } catch (error) {
     return res.json({ success: false, message: "Something went wrong", error });
   }
@@ -128,7 +240,7 @@ app.post("/add-product", async function (req, res) {
 //   }
 // });
 
-app.post("/get-product", async function (req, res) {
+/* app.post("/get-product", async function (req, res) {
   try {
     const { category, price } = req.body;
 
@@ -151,6 +263,15 @@ app.post("/get-product", async function (req, res) {
       message: "Products aggregated",
       data: aggResult,
     });
+  } catch (error) {
+    return res.json({ success: false, message: "Something went wrong", error });
+  }
+}); */
+
+app.get("/get-products", async function (req, res) {
+  try {
+    const products = await ProductSchema.find({});
+    return res.json({ success: true, message: "Successful", products });
   } catch (error) {
     return res.json({ success: false, message: "Something went wrong", error });
   }

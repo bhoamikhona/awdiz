@@ -20,21 +20,20 @@ export const AuthContextComponent = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, InitialState);
 
   function LOGIN(data) {
+    localStorage.setItem("userData", JSON.stringify(data));
     dispatch({ type: "LOGIN", payload: data });
   }
 
   function LOGOUT() {
+    localStorage.removeItem("userData");
     dispatch({ type: "LOGOUT" });
   }
 
   async function getUserData() {
     try {
-      const response = await axios.get(
-        "http://localhost:8000/api/v1/auth/validate-token",
-        {
-          withCredentials: true,
-        }
-      );
+      const response = await axios.get("http://localhost:8000/validate-token", {
+        withCredentials: true,
+      });
 
       if (response.data.success) {
         LOGIN(response.data.user);

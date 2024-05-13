@@ -24,7 +24,7 @@ export default function Login() {
     if (userData.email && userData.password) {
       try {
         const response = await axios.post(
-          "http://localhost:8000/api/v1/auth/login",
+          "http://localhost:8000/login",
           userData,
           { withCredentials: true }
         );
@@ -37,7 +37,7 @@ export default function Login() {
             password: "",
           });
 
-          router("/");
+          router("/add-product");
         } else {
           // toast.error(response.data.message);
           // console.log(response);

@@ -30,7 +30,7 @@ export default function Register() {
 
       try {
         const response = await axios.post(
-          "http://localhost:8000/api/v1/auth/register",
+          "http://localhost:8000/register",
           userData
         );
         console.log(response);

@@ -8,6 +8,7 @@ const productSchema = new Schema({
   quantity: Number,
   tags: [String],
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  img: String,
 });
 
 const ProductSchema2 = Joi.object({
