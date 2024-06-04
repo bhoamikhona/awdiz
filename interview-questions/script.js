@@ -108,3 +108,72 @@ const secondHighest = function (arr) {
 };
 
 console.log(secondHighest([3, 1, 4, 5, 6]));
+
+// Q 15
+const reverseString = function (str) {
+  let result = "";
+
+  for (let i = 0; i < str.length; i++) {
+    result = str[i] + result;
+  }
+  return result;
+};
+
+console.log(reverseString("Hello World"));
+
+// Q 16
+const multiplicationTable = function (num) {
+  for (let i = 1; i < 11; i++) {
+    console.log(`${num} * ${i} = ${num * i}`);
+  }
+};
+
+multiplicationTable(6);
+////////////////////////////
+// // Q 01
+// function Adding(num) {
+//   let sum = 0;
+//   for (let i = 1; i <= num; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(Adding(10));
+// console.log(Adding(15));
+
+// // Q 08
+
+// const starPattern = function (num) {
+//   while (num > 0) {
+//     if (num % 2 === 0) {
+//       console.log("**");
+//     } else {
+//       console.log("*");
+//     }
+//     num--;
+//   }
+// };
+
+// starPattern(4);
+
+// // Q 09
+// function printPattern() {
+//   let num = 4;
+
+//   while (num >= 1) {
+//     let number = "";
+//     let currentNum = 1;
+
+//     while (currentNum <= num) {
+//       number += currentNum;
+//       currentNum++;
+//     }
+
+//     console.log(number);
+//     num--;
+//   }
+// }
+// printPattern();
+
+/////////////////////////////////
